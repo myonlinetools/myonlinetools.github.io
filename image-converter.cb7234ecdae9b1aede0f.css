@@ -1408,13 +1408,13 @@ nav {
   nav.shadow {
     box-shadow: var(--navbar-box-shadow); }
 
-nav.tool-navbar .left {
+nav.not-index-page .left {
   flex-shrink: 0;
   width: var(--left-width);
   transition: width 0.25s ease-in;
   overflow-x: hidden;
   border-right: 2px solid var(--border-color); }
-  nav.tool-navbar .left:hover {
+  nav.not-index-page .left:hover {
     background-color: var(--navbar-logo-background-color-on-hover); }
 
 nav .left {
@@ -1477,7 +1477,7 @@ nav .right {
   nav .right > select {
     display: none; } }
 
-.button-icon {
+.icon-button {
   cursor: pointer;
   border: 2px solid transparent;
   border-radius: 0.3rem;
@@ -1487,14 +1487,13 @@ nav .right {
   align-items: center;
   justify-content: center;
   background-color: transparent; }
-  .button-icon:hover {
+  .icon-button:hover {
     background-color: var(--button-icon-background-color); }
-
-.button-icon .iconify {
-  color: var(--button-icon-color);
-  font-size: 2.5rem;
-  transition: var(--transition);
-  transition-property: color; }
+  .icon-button .iconify {
+    color: var(--button-icon-color);
+    font-size: 2.5rem;
+    transition: var(--transition);
+    transition-property: color; }
 
 .feedback-form {
   flex: 1;
@@ -1682,6 +1681,24 @@ nav .right {
 @media only screen and (max-width: 45rem) {
   .side-panel-container .side-panel {
     --side-panel-width: 80%; } }
+
+.icon-link {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 0.3rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; }
+  .icon-link:hover {
+    background-color: var(--button-icon-background-color); }
+  .icon-link .iconify {
+    color: var(--button-icon-color);
+    font-size: 2.5rem;
+    transition: var(--transition);
+    transition-property: color; }
 
 .tools-summary-menu-with-collapse-button-container {
   flex-shrink: 0;
