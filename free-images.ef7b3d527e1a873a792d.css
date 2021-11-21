@@ -425,20 +425,44 @@ p {
   100% {
     background-position: 100% 50%; } }
 
-.main-container {
-  min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
-  width: 90%;
-  margin: 0 auto;
-  padding: 5rem 0; }
-  @media screen and (min-width: 768px) {
-    .main-container {
-      width: 85%; } }
-  @media screen and (min-width: 1024px) {
-    .main-container {
-      width: 80%; } }
-  @media screen and (min-width: 1440px) {
-    .main-container {
-      max-width: 1440px; } }
+h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-top: 2.8rem;
+  margin-bottom: 2rem;
+  position: relative;
+  color: var(--how-to-use-this-application-header-color); }
+  h1::before {
+    content: '';
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    width: 7rem;
+    height: 0.45rem;
+    background-color: var(--secondary-color);
+    border-radius: 100rem; }
+
+p {
+  text-align: justify;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin-bottom: 1.3rem;
+  color: var(--how-to-use-this-application-body-color); }
+
+a {
+  font-weight: bold; }
+
+ul {
+  font-size: 1.6rem;
+  list-style-type: square;
+  list-style-position: inside;
+  margin-left: 2rem; }
+
+li {
+  text-align: justify;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: var(--text-color-04); }
 
 @font-face {
   font-family: 'Anonymous Pro';
@@ -1287,16 +1311,17 @@ body {
   display: flex;
   flex-direction: column; }
 
-main {
+.page-container {
   display: flex; }
 
-.right {
-  min-width: 0;
-  flex: 1; }
+.main-container {
+  width: 100%; }
 
-.tool-container {
+.right-container {
+  width: 100%;
   max-width: 105rem;
   margin: 0 auto;
+  padding: 6rem 0;
   min-height: calc(100vh - var(--navbar-height) - var(--footer-height)); }
 
 .tool-container {
@@ -1363,6 +1388,7 @@ footer {
   footer p {
     font-size: 1.35rem; }
   footer p {
+    margin: 0;
     margin-left: 5rem; }
 
 nav {
@@ -1383,6 +1409,7 @@ nav {
     box-shadow: var(--navbar-box-shadow); }
 
 nav.tool-navbar .left {
+  flex-shrink: 0;
   width: var(--left-width);
   transition: width 0.25s ease-in;
   overflow-x: hidden;
@@ -1657,6 +1684,7 @@ nav .right {
     --side-panel-width: 80%; } }
 
 .tools-summary-menu-with-collapse-button-container {
+  flex-shrink: 0;
   width: var(--left-width);
   transition: width 0.25s ease-in;
   display: flex;
@@ -1727,7 +1755,8 @@ nav .right {
     display: initial; }
   .collapse-menu p {
     font-size: 1.45rem;
-    white-space: nowrap; }
+    white-space: nowrap;
+    margin-bottom: 0; }
 
 body.big-menu .collapse-menu .left-arrow {
   display: initial; }
