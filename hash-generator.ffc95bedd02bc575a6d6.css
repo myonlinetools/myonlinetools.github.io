@@ -1441,6 +1441,7 @@ nav .right {
     nav .right > select option {
       background-color: var(--select-background-color); }
   nav .right > a,
+  nav .right > .transparent-select-container,
   nav .right > select,
   nav .right > button {
     margin-left: 1rem; }
@@ -1795,6 +1796,56 @@ select {
     cursor: pointer; }
     select option:hover {
       background-color: var(--select-option-background-color-on-hover); }
+
+.transparent-select-container {
+  position: relative;
+  cursor: pointer; }
+  .transparent-select-container.open {
+    z-index: 100; }
+  .transparent-select-container .select-header {
+    font-family: 'Poppins', sans-serif;
+    color: var(--body-color);
+    cursor: pointer;
+    padding: 0.5rem 0.8rem 0.5rem 1.4rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: 2px solid transparent;
+    background-color: transparent; }
+    .transparent-select-container .select-header:hover {
+      background-color: var(--select-background-color); }
+    .transparent-select-container .select-header:focus {
+      border-color: var(--focus-color); }
+    .transparent-select-container .select-header .iconify {
+      margin-left: 0.4rem;
+      font-size: 1.8rem; }
+  .transparent-select-container .select-options {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--select-options-background-color);
+    box-shadow: var(--select-options-box-shadow);
+    border-radius: 0.3rem;
+    padding: 0.5rem 0; }
+  .transparent-select-container .select-option {
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    color: var(--body-color);
+    padding: 0.8rem 1.6rem;
+    text-align: left;
+    background-color: transparent;
+    border: 2px solid transparent;
+    outline: none; }
+  .transparent-select-container .select-option:hover,
+  .transparent-select-container .select-option:focus {
+    background-color: var(--select-option-background-color-on-hover); }
 
 .switch-off,
 .switch-on {
