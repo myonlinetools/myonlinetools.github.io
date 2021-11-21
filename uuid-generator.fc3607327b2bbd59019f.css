@@ -1359,7 +1359,8 @@ body {
     font-size: 2.7rem;
     margin-right: 1.5rem; }
   .cookies-consentement-container p {
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    margin-bottom: 0; }
   .cookies-consentement-container a {
     font-size: 1.3rem;
     text-decoration: underline; }
