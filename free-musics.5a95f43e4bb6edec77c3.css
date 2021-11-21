@@ -51,7 +51,7 @@ body {
   --dialog-background-color: var(--background-color-02);
   --dialog-backdrop-background-color: var(--background-color-01);
   --select-options-background-color: var(--background-color-02);
-  --select-option-background-color-on-hover: var(--background-color-03);
+  --select-option-background-color-on-hover: var(--background-color-04);
   --select-options-box-shadow: var(--box-shadow-01);
   --text-to-type-reference-color: var(--primary-color);
   --input-color: var(--body-color);
@@ -204,7 +204,7 @@ body.dark {
   --dialog-background-color: var(--background-color-02);
   --dialog-backdrop-background-color: var(--background-color-01);
   --select-options-background-color: var(--background-color-02);
-  --select-option-background-color-on-hover: var(--background-color-03);
+  --select-option-background-color-on-hover: var(--background-color-04);
   --select-options-box-shadow: var(--box-shadow-01);
   --text-to-type-reference-color: var(--primary-color);
   --input-color: var(--body-color);
@@ -1848,6 +1848,8 @@ select {
   cursor: pointer; }
   .transparent-select-container.open {
     z-index: 100; }
+  .transparent-select-container:hover .select-options {
+    display: flex !important; }
   .transparent-select-container .select-header {
     font-family: 'Poppins', sans-serif;
     color: var(--body-color);
@@ -1874,6 +1876,7 @@ select {
     white-space: nowrap;
     position: absolute;
     top: calc(100% + 0.5rem);
+    top: 100%;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -1885,7 +1888,8 @@ select {
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     color: var(--body-color);
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 1.3rem;
+    font-size: 500;
     text-align: left;
     background-color: transparent;
     border: 2px solid transparent;
