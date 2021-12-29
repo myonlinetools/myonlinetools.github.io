@@ -147,7 +147,10 @@ body {
   --add-icon-color-on-hover: var(--primary-color);
   --table-head-background-color: var(--background-color-04);
   --table-row-background-color: var(--background-color-03);
-  --table-color: var(--body-color); }
+  --table-color: var(--body-color);
+  --transparent-background: #f9fafb
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMAQMAAABsu86kAAAAA3NCSVQICAjb4U/gAAAABlBMVEXu7u7///8o06qaAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFXRFWHRDcmVhdGlvbiBUaW1lADcvMjIvMTL7FNdCAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M1cbXjNgAAABFJREFUCJljYP7AgIb+MKAhAM8/C5vWL6zSAAAAAElFTkSuQmCC)
+    top left repeat; }
 
 body.dark {
   --primary-color: #2478e6;
@@ -300,7 +303,10 @@ body.dark {
   --add-icon-color-on-hover: var(--primary-color);
   --table-head-background-color: var(--background-color-03);
   --table-row-background-color: var(--background-color-02);
-  --table-color: var(--body-color); }
+  --table-color: var(--body-color);
+  --transparent-background: #f9fafb
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMAQMAAABsu86kAAAAA3NCSVQICAjb4U/gAAAABlBMVEXu7u7///8o06qaAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFXRFWHRDcmVhdGlvbiBUaW1lADcvMjIvMTL7FNdCAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M1cbXjNgAAABFJREFUCJljYP7AgIb+MKAhAM8/C5vWL6zSAAAAAElFTkSuQmCC)
+    top left repeat; }
 
 *,
 *::after,
@@ -1321,6 +1327,24 @@ body {
   padding: 5rem 0;
   min-height: calc(100vh - var(--navbar-height)); }
 
+.icon-button {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 0.3rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; }
+  .icon-button:hover {
+    background-color: var(--button-icon-background-color); }
+  .icon-button .iconify {
+    color: var(--button-icon-color);
+    font-size: 2.5rem;
+    transition: var(--transition);
+    transition-property: color; }
+
 .cookies-consentement-container {
   z-index: 5000000;
   position: fixed;
@@ -1470,24 +1494,6 @@ nav .right {
 @media only screen and (max-width: 768px) {
   nav .right > select {
     display: none; } }
-
-.icon-button {
-  cursor: pointer;
-  border: 2px solid transparent;
-  border-radius: 0.3rem;
-  height: 3.5rem;
-  width: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent; }
-  .icon-button:hover {
-    background-color: var(--button-icon-background-color); }
-  .icon-button .iconify {
-    color: var(--button-icon-color);
-    font-size: 2.5rem;
-    transition: var(--transition);
-    transition-property: color; }
 
 .feedback-form {
   flex: 1;
@@ -1760,15 +1766,38 @@ body.big-menu .collapse-menu .right-arrow {
 .color-picker-tool-container {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 30rem;
-  border-radius: 1rem; }
-  .color-picker-tool-container .selected-color {
+  height: 35rem;
+  border-radius: 1rem;
+  overflow: hidden; }
+  .color-picker-tool-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  .color-picker-tool-container .selected-color-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  .color-picker-tool-container .selected-color-value {
     color: white;
-    font-weight: 600;
+    opacity: 0.5;
+    font-weight: 400;
     font-size: 2.5rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    z-index: 2;
+    margin-bottom: -1rem; }
+  .color-picker-tool-container .selected-color-name {
+    color: white;
+    font-weight: bold;
+    font-size: 4rem;
+    z-index: 2; }
   .color-picker-tool-container .hsv-color-picker-container {
     position: absolute;
     top: 2.5rem;
@@ -1776,7 +1805,7 @@ body.big-menu .collapse-menu .right-arrow {
 
 .hsv-color-picker-container {
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: .5rem;
   width: 30rem;
   background-color: white;
   box-shadow: #00000026 0 0 0 1px, #0000000d 0 10px 10px -5px;
@@ -1788,7 +1817,6 @@ body.big-menu .collapse-menu .right-arrow {
   margin-bottom: 2rem; }
   .sv-color-picker-container .sv-color-picker {
     box-shadow: inset #0000001c 0 0 0 1px;
-    border-radius: 0.55rem;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1817,7 +1845,6 @@ body.big-menu .collapse-menu .right-arrow {
       height: 1.5rem;
       border-radius: 100rem; }
   .sv-color-picker-container .white-transparent-to-white-background {
-    border-radius: 0.5rem;
     background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
     position: absolute;
     width: 100%;
@@ -1825,7 +1852,6 @@ body.big-menu .collapse-menu .right-arrow {
     top: 0;
     left: 0; }
   .sv-color-picker-container .black-transparent-to-black-background {
-    border-radius: 0.5rem;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
     position: absolute;
     width: 100%;
@@ -1835,7 +1861,8 @@ body.big-menu .collapse-menu .right-arrow {
 
 .h-color-picker-container {
   height: 3.2rem;
-  position: relative; }
+  position: relative;
+  margin-bottom: 2rem; }
   .h-color-picker-container .h-color-picker {
     box-shadow: inset #0000001c 0 0 0 1px;
     position: absolute;
@@ -1843,7 +1870,6 @@ body.big-menu .collapse-menu .right-arrow {
     height: 100%;
     top: 0;
     left: 0;
-    border-radius: 0.5rem;
     background: linear-gradient(to right, red, yellow, lime, cyan, blue, magenta, red); }
   .h-color-picker-container .cursor {
     position: absolute;
@@ -1870,15 +1896,15 @@ body.big-menu .collapse-menu .right-arrow {
 
 .opacity-picker-container {
   height: 3.2rem;
-  position: relative; }
+  position: relative;
+  background: var(--transparent-background); }
   .opacity-picker-container .opacity-picker {
     box-shadow: inset #0000001c 0 0 0 1px;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
-    border-radius: 0.5rem; }
+    left: 0; }
   .opacity-picker-container .cursor {
     position: absolute;
     padding: 0.35rem;
