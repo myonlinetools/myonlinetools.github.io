@@ -1805,7 +1805,7 @@ body.big-menu .collapse-menu .right-arrow {
 
 .hsv-color-picker-container {
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 30rem;
   background-color: white;
   box-shadow: #00000026 0 0 0 1px, #0000000d 0 10px 10px -5px;
@@ -1814,7 +1814,8 @@ body.big-menu .collapse-menu .right-arrow {
 .sv-color-picker-container {
   height: 18rem;
   position: relative;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  cursor: pointer; }
   .sv-color-picker-container .sv-color-picker {
     box-shadow: inset #0000001c 0 0 0 1px;
     position: absolute;
@@ -1862,7 +1863,8 @@ body.big-menu .collapse-menu .right-arrow {
 .h-color-picker-container {
   height: 3.2rem;
   position: relative;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  cursor: pointer; }
   .h-color-picker-container .h-color-picker {
     box-shadow: inset #0000001c 0 0 0 1px;
     position: absolute;
@@ -1897,7 +1899,8 @@ body.big-menu .collapse-menu .right-arrow {
 .opacity-picker-container {
   height: 3.2rem;
   position: relative;
-  background: var(--transparent-background); }
+  background: var(--transparent-background);
+  cursor: pointer; }
   .opacity-picker-container .opacity-picker {
     box-shadow: inset #0000001c 0 0 0 1px;
     position: absolute;
