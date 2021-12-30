@@ -150,7 +150,8 @@ body {
   --table-color: var(--body-color);
   --transparent-background: #f9fafb
     url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMAQMAAABsu86kAAAAA3NCSVQICAjb4U/gAAAABlBMVEXu7u7///8o06qaAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFXRFWHRDcmVhdGlvbiBUaW1lADcvMjIvMTL7FNdCAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M1cbXjNgAAABFJREFUCJljYP7AgIb+MKAhAM8/C5vWL6zSAAAAAElFTkSuQmCC)
-    top left repeat; }
+    top left repeat;
+  --color-picker-background-color: var(--background-color-01); }
 
 body.dark {
   --primary-color: #2478e6;
@@ -306,7 +307,8 @@ body.dark {
   --table-color: var(--body-color);
   --transparent-background: #f9fafb
     url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMAQMAAABsu86kAAAAA3NCSVQICAjb4U/gAAAABlBMVEXu7u7///8o06qaAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFXRFWHRDcmVhdGlvbiBUaW1lADcvMjIvMTL7FNdCAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M1cbXjNgAAABFJREFUCJljYP7AgIb+MKAhAM8/C5vWL6zSAAAAAElFTkSuQmCC)
-    top left repeat; }
+    top left repeat;
+  --color-picker-background-color: var(--background-color-02); }
 
 *,
 *::after,
@@ -1344,19 +1346,17 @@ input {
     width: 3rem !important;
     height: 3rem !important; }
 
-body {
-  display: flex;
-  flex-direction: column; }
+.tool-container {
+  position: relative; }
 
-.page-container {
-  display: flex; }
-
-.main-container {
-  width: 100%;
-  max-width: 105rem;
-  margin: 0 auto;
-  padding: 5rem 0;
-  min-height: calc(100vh - var(--navbar-height)); }
+.coming-soon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: 200;
+  text-transform: uppercase; }
 
 .icon-button {
   cursor: pointer;
@@ -1792,211 +1792,4 @@ body.big-menu .collapse-menu .left-arrow {
 
 body.big-menu .collapse-menu .right-arrow {
   display: none; }
-
-
-.selected-color-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 35rem;
-  border-radius: 1rem;
-  overflow: hidden; }
-  .selected-color-container .selected-color-background {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; }
-  .selected-color-container .selected-color-value {
-    opacity: 0.6;
-    font-family: 'Roboto Mono';
-    font-weight: 600;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin-bottom: -0.5rem; }
-  .selected-color-container .selected-color-name {
-    color: white;
-    font-weight: bold;
-    font-size: 4rem; }
-  .selected-color-container .hsv-color-picker-container {
-    position: absolute;
-    top: 2.5rem;
-    left: 2.5rem; }
-
-.color-picker-input-container {
-  height: 5.5rem;
-  border-radius: 0.4rem;
-  border: 2px solid var(--border-color);
-  margin-bottom: 3rem;
-  display: flex;
-  align-items: center;
-  position: relative;
-  transition: var(--transition);
-  transition-property: border-color; }
-  .color-picker-input-container.active {
-    border-color: var(--focus-color); }
-  .color-picker-input-container button {
-    width: 2.6rem;
-    height: 2.6rem;
-    border-radius: 0.3rem;
-    border: none;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem; }
-  .color-picker-input-container .color-code-prefix {
-    font-family: var(--font-family);
-    color: var(--body-color);
-    font-size: 2rem;
-    margin-right: 0.6rem; }
-  .color-picker-input-container input {
-    flex: 1;
-    border: none;
-    outline: none;
-    font-size: 2rem; }
-  .color-picker-input-container .color-picker-input-container-color-picker {
-    z-index: var(--color-picker-z-index); }
-  .color-picker-input-container .color-picker-container {
-    position: absolute;
-    top: calc(100% + 1rem);
-    left: 2rem; }
-
-.color-picker-container {
-  width: 30rem;
-  background-color: white;
-  box-shadow: 0px 0px 25px 0px #00000030; }
-
-.hsv-color-picker-container {
-  width: 30rem;
-  background-color: white;
-  box-shadow: 0px 0px 25px 0px #00000030; }
-
-.sv-color-picker-container {
-  height: 18rem;
-  position: relative;
-  cursor: pointer; }
-  .sv-color-picker-container .sv-color-picker {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0; }
-  .sv-color-picker-container .cursor {
-    position: absolute;
-    left: 90%;
-    top: 10%;
-    width: 2rem;
-    height: 2rem;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100rem;
-    border: 3px solid #fff;
-    transform: translate(-50%, -50%);
-    pointer-events: painted;
-    cursor: -webkit-grab;
-    cursor: grab; }
-  .sv-color-picker-container .white-transparent-to-white-background {
-    background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0; }
-  .sv-color-picker-container .black-transparent-to-black-background {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0; }
-
-.hsv-color-picker-bottom-container {
-  padding: 2.5rem; }
-
-.h-color-picker-container {
-  height: 1.65rem;
-  position: relative;
-  margin-bottom: 2rem;
-  cursor: pointer; }
-  .h-color-picker-container .h-color-picker {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 100rem;
-    background: linear-gradient(to right, red, yellow, lime, cyan, blue, magenta, red); }
-
-.opacity-picker-container {
-  height: 1.65rem;
-  position: relative;
-  background: var(--transparent-background);
-  cursor: pointer;
-  margin-bottom: 2rem;
-  border-radius: 100rem; }
-  .opacity-picker-container .opacity-picker {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 100rem; }
-
-.h-color-picker-container .cursor,
-.opacity-picker-container .cursor {
-  position: absolute;
-  padding: 0.35rem;
-  top: 50%;
-  width: 2.4rem;
-  height: 2.4rem;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #ddd;
-  border-radius: 100rem;
-  transform: translate(-50%, -50%);
-  pointer-events: painted;
-  cursor: -webkit-grab;
-  cursor: grab; }
-
-.rgb-color-input-container {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 0.8rem;
-  grid-row-gap: 0.1rem; }
-  .rgb-color-input-container input {
-    font-size: 1.7rem;
-    min-width: 0;
-    text-align: center;
-    border: 2px solid var(--border-color);
-    border-radius: 0.5rem;
-    padding: 0.5rem 0; }
-  .rgb-color-input-container span {
-    line-height: 2.2;
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: var(--body-color);
-    text-align: center; }
-
-.color-picker-tool-header-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 0 5rem; }
-  .color-picker-tool-header-container h1 {
-    all: unset;
-    flex: 1;
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 1.2rem; }
-    .color-picker-tool-header-container h1::before, .color-picker-tool-header-container h1::after {
-      display: none; }
-  .color-picker-tool-header-container h2 {
-    font-size: 1.85rem;
-    font-weight: 400; }
 
