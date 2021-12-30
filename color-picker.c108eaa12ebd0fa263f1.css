@@ -470,6 +470,23 @@ li {
   line-height: 1.7;
   color: var(--text-color-04); }
 
+button:hover {
+  cursor: pointer; }
+
+button,
+input {
+  font-family: var(--font-family);
+  color: var(--body-color);
+  background-color: transparent; }
+
+.clickable-element-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; }
+
 @font-face {
   font-family: 'Anonymous Pro';
   font-style: normal;
@@ -1313,17 +1330,19 @@ li {
     width: 3rem !important;
     height: 3rem !important; }
 
-.tool-container {
-  position: relative; }
+body {
+  display: flex;
+  flex-direction: column; }
 
-.coming-soon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 4rem;
-  font-weight: 200;
-  text-transform: uppercase; }
+.page-container {
+  display: flex; }
+
+.main-container {
+  width: 100%;
+  max-width: 105rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+  min-height: calc(100vh - var(--navbar-height)); }
 
 .icon-button {
   cursor: pointer;
@@ -1760,4 +1779,166 @@ body.big-menu .collapse-menu .left-arrow {
 
 body.big-menu .collapse-menu .right-arrow {
   display: none; }
+
+
+.selected-color-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 35rem;
+  border-radius: 1rem;
+  overflow: hidden; }
+  .selected-color-container .selected-color-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  .selected-color-container .selected-color-value {
+    opacity: 0.6;
+    font-family: 'Roboto Mono';
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    z-index: 2;
+    margin-bottom: -0.5rem; }
+  .selected-color-container .selected-color-name {
+    color: white;
+    font-weight: bold;
+    font-size: 4rem;
+    z-index: 2; }
+  .selected-color-container .hsv-color-picker-container {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem; }
+
+.color-picker-input-container {
+  height: 5.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--border-color);
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .color-picker-input-container button {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 100rem;
+    border: none;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem; }
+  .color-picker-input-container .color-code-prefix {
+    font-family: var(--font-family);
+    color: var(--body-color);
+    font-size: 2rem;
+    margin-right: 0.6rem; }
+  .color-picker-input-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 2rem; }
+  .color-picker-input-container .color-picker-input-container-color-picker {
+    z-index: 3000000; }
+  .color-picker-input-container .hsv-color-picker-container {
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 2rem; }
+
+.hsv-color-picker-container {
+  width: 30rem;
+  background-color: white;
+  z-index: 4;
+  box-shadow: 0px 0px 25px 0px #00000030; }
+
+.sv-color-picker-container {
+  height: 18rem;
+  position: relative;
+  cursor: pointer; }
+  .sv-color-picker-container .sv-color-picker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  .sv-color-picker-container .cursor {
+    position: absolute;
+    left: 90%;
+    top: 10%;
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100rem;
+    border: 3px solid #fff;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: painted;
+    cursor: -webkit-grab;
+    cursor: grab; }
+  .sv-color-picker-container .white-transparent-to-white-background {
+    background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  .sv-color-picker-container .black-transparent-to-black-background {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+
+.hsv-color-picker-bottom-container {
+  padding: 2.5rem; }
+
+.h-color-picker-container {
+  height: 1.65rem;
+  position: relative;
+  margin-bottom: 2rem;
+  cursor: pointer; }
+  .h-color-picker-container .h-color-picker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 100rem;
+    background: linear-gradient(to right, red, yellow, lime, cyan, blue, magenta, red); }
+
+.opacity-picker-container {
+  height: 1.65rem;
+  position: relative;
+  cursor: pointer; }
+  .opacity-picker-container .opacity-picker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 100rem; }
+
+.h-color-picker-container .cursor,
+.opacity-picker-container .cursor {
+  position: absolute;
+  padding: 0.35rem;
+  top: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ddd;
+  border-radius: 100rem;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: painted;
+  cursor: -webkit-grab;
+  cursor: grab; }
 
