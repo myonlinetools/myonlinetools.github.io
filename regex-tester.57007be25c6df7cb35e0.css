@@ -341,7 +341,18 @@ body {
   --page-padding-top: 6rem;
   --page-width: 68%;
   --main-margin: 0 3rem;
-  --ads-width: 20rem; }
+  --ads-width: 20rem;
+  --navbar-z-index: 30000000;
+  --ads-blocker-message-z-index: 300000;
+  --cookies-consentement-z-index: 5000000;
+  --dialog-z-index: 1000;
+  --select-z-index: 100;
+  --side-panel-z-index: 1000000;
+  --toast-z-index: 100000;
+  --color-picker-z-index: 3000000;
+  --buy-me-a-coffee-z-index: 100000;
+  --text-to-type-training-arrow-z-index: 200;
+  --toggle-typing-button-z-index: 100; }
   html.big-menu,
   body.big-menu {
     --left-width: 26rem; }
@@ -488,7 +499,7 @@ input {
   background-color: transparent; }
 
 .transparent-background {
-  background: var(--transparent-background); }
+  background: var(--transparent-background) !important; }
 
 @font-face {
   font-family: 'Anonymous Pro';
@@ -1328,58 +1339,22 @@ input {
   width: 5.4rem !important;
   height: 5.4rem !important;
   background-color: var(--buy-me-a-coffee-background-color) !important;
-  z-index: 100000; }
+  z-index: var(--buy-me-a-coffee-z-index); }
   #bmc-wbtn > img {
     width: 3rem !important;
     height: 3rem !important; }
 
-.main-container {
-  min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
-  width: 90%;
-  margin: 0 auto;
-  padding: 5rem 0; }
-  @media screen and (min-width: 768px) {
-    .main-container {
-      width: 85%; } }
-  @media screen and (min-width: 1024px) {
-    .main-container {
-      width: 80%; } }
-  @media screen and (min-width: 1440px) {
-    .main-container {
-      max-width: 1440px; } }
+.tool-container {
+  position: relative; }
 
-.tools-summary-mosaic-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
-
-.tool-summary-square-container {
-  min-width: 25rem;
-  height: 18rem;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  color: var(--body-color);
-  transition: var(--transition);
-  transition-property: color, background-color;
-  background-color: var(--tool-card-background-color);
-  margin-right: 2rem;
-  margin-bottom: 2rem; }
-  .tool-summary-square-container:hover {
-    color: var(--primary-color);
-    text-decoration: none;
-    background-color: var(--tool-card-background-color-on-hover); }
-    .tool-summary-square-container:hover .iconify {
-      color: var(--primary-color); }
-  .tool-summary-square-container .iconify {
-    font-size: 6rem;
-    margin-bottom: 2rem;
-    flex-shrink: 0; }
-  .tool-summary-square-container .name {
-    font-weight: 400; }
+.coming-soon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: 200;
+  text-transform: uppercase; }
 
 .icon-button {
   cursor: pointer;
@@ -1400,7 +1375,7 @@ input {
     transition-property: color; }
 
 .cookies-consentement-container {
-  z-index: 5000000;
+  z-index: var(--cookies-consentement-z-index);
   position: fixed;
   bottom: -100%;
   left: 0;
@@ -1460,7 +1435,7 @@ footer {
 
 nav {
   background-color: var(--navbar-background-color);
-  z-index: 100000;
+  z-index: var(--navbar-z-index);
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -1523,7 +1498,6 @@ nav .left {
       color: var(--primary-color); }
 
 nav .right {
-  z-index: 999;
   position: relative;
   display: flex;
   align-items: center;
@@ -1589,7 +1563,7 @@ nav .right {
       opacity: 0.85; }
 
 .toast-container {
-  z-index: 100000;
+  z-index: var(--toast-z-index);
   position: fixed;
   top: calc(var(--navbar-height) + 1.5rem);
   right: -30rem;
@@ -1649,7 +1623,7 @@ nav .right {
   font-size: 1.5rem; }
 
 .container {
-  z-index: 1000000;
+  z-index: var(--side-panel-z-index);
   max-height: 100vh; }
   .container .side-panel-background {
     display: none;
@@ -1663,7 +1637,7 @@ nav .right {
     --side-panel-width: 40rem;
     box-shadow: var(--box-shadow-02);
     padding: 2rem;
-    z-index: 30000;
+    z-index: var(--side-panel-z-index);
     background-color: var(--side-panel-background-color);
     position: fixed;
     top: 0;
