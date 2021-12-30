@@ -1789,7 +1789,8 @@ body.big-menu .collapse-menu .right-arrow {
   justify-content: center;
   height: 35rem;
   border-radius: 1rem;
-  overflow: hidden; }
+  overflow: hidden;
+  border: 2px solid var(--border-color); }
   .selected-color-container .selected-color-background {
     position: absolute;
     top: 0;
@@ -1816,16 +1817,20 @@ body.big-menu .collapse-menu .right-arrow {
 
 .color-picker-input-container {
   height: 5.5rem;
-  border-radius: 0.3rem;
-  border: 1px solid var(--border-color);
+  border-radius: 0.4rem;
+  border: 2px solid var(--border-color);
   margin-bottom: 3rem;
   display: flex;
   align-items: center;
-  position: relative; }
+  position: relative;
+  transition: var(--transition);
+  transition-property: border-color; }
+  .color-picker-input-container.active {
+    border-color: var(--focus-color); }
   .color-picker-input-container button {
     width: 2.6rem;
     height: 2.6rem;
-    border-radius: 100rem;
+    border-radius: 0.3rem;
     border: none;
     margin-left: 1.5rem;
     margin-right: 1.5rem; }
@@ -1841,10 +1846,16 @@ body.big-menu .collapse-menu .right-arrow {
     font-size: 2rem; }
   .color-picker-input-container .color-picker-input-container-color-picker {
     z-index: 3000000; }
-  .color-picker-input-container .hsv-color-picker-container {
+  .color-picker-input-container .color-picker-container {
     position: absolute;
     top: calc(100% + 1rem);
     left: 2rem; }
+
+.color-picker-container {
+  width: 30rem;
+  background-color: white;
+  z-index: 4;
+  box-shadow: 0px 0px 25px 0px #00000030; }
 
 .hsv-color-picker-container {
   width: 30rem;
@@ -1914,7 +1925,8 @@ body.big-menu .collapse-menu .right-arrow {
 .opacity-picker-container {
   height: 1.65rem;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-bottom: 2rem; }
   .opacity-picker-container .opacity-picker {
     position: absolute;
     width: 100%;
@@ -1941,4 +1953,23 @@ body.big-menu .collapse-menu .right-arrow {
   pointer-events: painted;
   cursor: -webkit-grab;
   cursor: grab; }
+
+.rgb-color-input-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 0.8rem;
+  grid-row-gap: 0.5rem; }
+  .rgb-color-input-container input {
+    font-size: 1.7rem;
+    min-width: 0;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0; }
+  .rgb-color-input-container span {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--body-color);
+    text-align: center; }
 
