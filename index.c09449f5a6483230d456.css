@@ -351,15 +351,15 @@ body {
   --main-margin: 0 3rem;
   --ads-width: 20rem;
   --navbar-z-index: 30000000;
-  --ads-blocker-message-z-index: 300000;
   --cookies-consentement-z-index: 5000000;
-  --dialog-z-index: 1000;
-  --select-z-index: 100;
-  --side-panel-z-index: 1000000;
-  --toast-z-index: 100000;
   --color-picker-z-index: 3000000;
+  --side-panel-z-index: 1000000;
+  --ads-blocker-message-z-index: 300000;
+  --toast-z-index: 100000;
   --buy-me-a-coffee-z-index: 100000;
+  --dialog-z-index: 1000;
   --text-to-type-training-arrow-z-index: 200;
+  --select-z-index: 100;
   --toggle-typing-button-z-index: 100; }
   html.big-menu,
   body.big-menu {
@@ -1856,17 +1856,53 @@ input {
     width: 3rem !important;
     height: 3rem !important; }
 
-.tool-container {
-  position: relative; }
+.main-container {
+  min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+  width: 90%;
+  margin: 0 auto;
+  padding: 5rem 0; }
+  @media screen and (min-width: 768px) {
+    .main-container {
+      width: 85%; } }
+  @media screen and (min-width: 1024px) {
+    .main-container {
+      width: 80%; } }
+  @media screen and (min-width: 1440px) {
+    .main-container {
+      max-width: 1440px; } }
 
-.coming-soon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 4rem;
-  font-weight: 200;
-  text-transform: uppercase; }
+.tools-summary-mosaic-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.tool-summary-square-container {
+  min-width: 25rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  color: var(--body-color);
+  transition: var(--transition);
+  transition-property: color, background-color;
+  background-color: var(--tool-card-background-color);
+  margin-right: 2rem;
+  margin-bottom: 2rem; }
+  .tool-summary-square-container:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+    background-color: var(--tool-card-background-color-on-hover); }
+    .tool-summary-square-container:hover .iconify {
+      color: var(--primary-color); }
+  .tool-summary-square-container .iconify {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    flex-shrink: 0; }
+  .tool-summary-square-container .name {
+    font-weight: 400; }
 
 .icon-button {
   cursor: pointer;

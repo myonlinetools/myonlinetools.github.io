@@ -351,15 +351,15 @@ body {
   --main-margin: 0 3rem;
   --ads-width: 20rem;
   --navbar-z-index: 30000000;
-  --ads-blocker-message-z-index: 300000;
   --cookies-consentement-z-index: 5000000;
-  --dialog-z-index: 1000;
-  --select-z-index: 100;
-  --side-panel-z-index: 1000000;
-  --toast-z-index: 100000;
   --color-picker-z-index: 3000000;
+  --side-panel-z-index: 1000000;
+  --ads-blocker-message-z-index: 300000;
+  --toast-z-index: 100000;
   --buy-me-a-coffee-z-index: 100000;
+  --dialog-z-index: 1000;
   --text-to-type-training-arrow-z-index: 200;
+  --select-z-index: 100;
   --toggle-typing-button-z-index: 100; }
   html.big-menu,
   body.big-menu {
