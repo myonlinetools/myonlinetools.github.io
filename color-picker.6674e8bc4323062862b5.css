@@ -2336,7 +2336,7 @@ body.big-menu .collapse-menu .right-arrow {
       top: 3rem;
       right: 3rem;
       border-radius: 100rem;
-      background-color: white;
+      background-color: var(--background-color-01);
       border: 1px solid var(--border-color); }
       .selected-color-container.zoomed .close-button .iconify {
         font-size: 3rem; }
@@ -2603,4 +2603,5 @@ body.big-menu .collapse-menu .right-arrow {
       flex-basis: 6rem; }
       .color-variations-container .color-variations .color-variation:hover .color-variation-value {
         opacity: 1; }
+
 
