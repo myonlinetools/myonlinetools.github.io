@@ -1909,6 +1909,38 @@ select {
   .add-custom-text-to-type-side-panel {
     --side-panel-width: 80% !important; } }
 
+.app-settings {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1rem; }
+  .app-settings .app-setting {
+    padding-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .app-settings .app-setting span {
+      color: var(--body-color); }
+    .app-settings .app-setting .app-setting-label {
+      font-size: 1.4rem; }
+    .app-settings .app-setting .app-setting-input,
+    .app-settings .app-setting .app-setting-select {
+      width: 100%; }
+  .app-settings .app-settings-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+    .app-settings .app-settings-buttons > * {
+      margin-left: 1.2rem; }
+
+.app-settings-side-panel {
+  --side-panel-width: 55rem !important; }
+
+@media only screen and (max-width: 60rem) {
+  .app-settings-side-panel {
+    --side-panel-width: 80% !important; } }
+
 .switch-off,
 .switch-on {
   cursor: pointer;
@@ -1943,38 +1975,6 @@ select {
   .labeled-switch.on {
     background-color: var(--secondary-color);
     color: white; }
-
-.app-settings {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 1rem; }
-  .app-settings .app-setting {
-    padding-bottom: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    .app-settings .app-setting span {
-      color: var(--body-color); }
-    .app-settings .app-setting .app-setting-label {
-      font-size: 1.4rem; }
-    .app-settings .app-setting .app-setting-input,
-    .app-settings .app-setting .app-setting-select {
-      width: 100%; }
-  .app-settings .app-settings-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; }
-    .app-settings .app-settings-buttons > * {
-      margin-left: 1.2rem; }
-
-.app-settings-side-panel {
-  --side-panel-width: 55rem !important; }
-
-@media only screen and (max-width: 60rem) {
-  .app-settings-side-panel {
-    --side-panel-width: 80% !important; } }
 
 .table {
   display: grid;
