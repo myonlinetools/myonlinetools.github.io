@@ -2380,7 +2380,7 @@ body.big-menu .collapse-menu .right-arrow {
     position: absolute;
     top: 0.8rem;
     right: 1.5rem;
-    font-size: 4rem; }
+    font-size: 3.5rem; }
     .selected-color-container .add-to-palette-button .iconify,
     .selected-color-container .remove-from-palette-button .iconify {
       color: white; }
@@ -2663,9 +2663,10 @@ body.big-menu .collapse-menu .right-arrow {
     font-weight: bold; }
 
 .palette-container .palette {
-  display: flex;
-  border-radius: 0.5rem;
-  overflow: hidden; }
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-row-gap: 0.8rem;
+  grid-column-gap: 0.8rem; }
 
 .palette-container .palette-color {
   border-radius: 0.5rem;
@@ -2676,10 +2677,7 @@ body.big-menu .collapse-menu .right-arrow {
   flex: 12rem 0 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-right: 1rem; }
-  .palette-container .palette-color:last-of-type {
-    margin-right: 0; }
+  justify-content: center; }
 
 .palette-container .palette-color-value {
   transition: opacity 0.15s ease-in-out;
