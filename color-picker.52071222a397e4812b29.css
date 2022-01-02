@@ -2673,7 +2673,7 @@ body.big-menu .collapse-menu .right-arrow {
 .palette-container .palette-color {
   border-radius: 0.5rem;
   position: relative;
-  cursor: pointer;
+  cursor: move;
   transition: flex 0.2s ease-in-out;
   height: 12rem;
   flex: 12rem 0 0;
