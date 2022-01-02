@@ -2349,6 +2349,7 @@ body.big-menu .collapse-menu .right-arrow {
       border: 1px solid var(--border-color); }
       .selected-color-container.zoomed .close-button .iconify {
         font-size: 3rem; }
+    .selected-color-container.zoomed .copy-button,
     .selected-color-container.zoomed .add-to-palette-button,
     .selected-color-container.zoomed .generate-color-button {
       display: none; }
@@ -2362,10 +2363,9 @@ body.big-menu .collapse-menu .right-arrow {
     left: 0; }
   .selected-color-container .selected-color-value {
     opacity: 0.6;
-    font-family: 'Roboto Mono';
+    font-family: 'Inter' sans-serif;
     font-weight: 600;
     font-size: 2.5rem;
-    text-transform: uppercase;
     margin-bottom: -0.5rem; }
   .selected-color-container .selected-color-name {
     color: white;
@@ -2375,17 +2375,30 @@ body.big-menu .collapse-menu .right-arrow {
     position: absolute;
     top: 2.5rem;
     left: 2.5rem; }
+  .selected-color-container .copy-button,
   .selected-color-container .add-to-palette-button,
   .selected-color-container .generate-color-button {
     position: absolute;
     top: 0.8rem;
     right: 1.5rem;
     font-size: 3.5rem; }
+    .selected-color-container .copy-button .iconify,
     .selected-color-container .add-to-palette-button .iconify,
     .selected-color-container .generate-color-button .iconify {
       color: white; }
   .selected-color-container .generate-color-button {
     right: 6rem; }
+  .selected-color-container .copy-button {
+    right: 11rem; }
+  .selected-color-container .generate-color-button,
+  .selected-color-container .add-to-palette-button,
+  .selected-color-container .copy-button {
+    transition: opacity 0.2s ease-in;
+    opacity: 0.7; }
+    .selected-color-container .generate-color-button:hover,
+    .selected-color-container .add-to-palette-button:hover,
+    .selected-color-container .copy-button:hover {
+      opacity: 1; }
 
 .color-picker-input-container {
   height: 5.5rem;
