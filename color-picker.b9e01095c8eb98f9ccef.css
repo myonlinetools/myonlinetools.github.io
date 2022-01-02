@@ -2386,10 +2386,10 @@ body.big-menu .collapse-menu .right-arrow {
     .selected-color-container .add-to-palette-button .iconify,
     .selected-color-container .generate-color-button .iconify {
       color: white; }
-  .selected-color-container .generate-color-button {
+  .selected-color-container .add-to-palette-button {
     right: 6rem; }
   .selected-color-container .copy-button {
-    right: 11rem; }
+    right: 10rem; }
   .selected-color-container .generate-color-button,
   .selected-color-container .add-to-palette-button,
   .selected-color-container .copy-button {
