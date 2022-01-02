@@ -1856,17 +1856,20 @@ input {
     width: 3rem !important;
     height: 3rem !important; }
 
-.tool-container {
-  position: relative; }
+body {
+  display: flex;
+  flex-direction: column; }
 
-.coming-soon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 4rem;
-  font-weight: 200;
-  text-transform: uppercase; }
+.page-container {
+  display: flex; }
+
+.main-container {
+  width: 100%;
+  max-width: 105rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+  min-height: calc(100vh - var(--navbar-height)); }
+
 
 .icon-button {
   cursor: pointer;
@@ -2081,8 +2084,8 @@ nav .right {
   right: -30rem;
   width: 30rem;
   border-radius: 0.3rem;
-  transition: right 0.5s ease-in;
-  padding: 1.5rem;
+  transition: right 0.3s ease-in;
+  padding: 0.8rem 1.5rem;
   font-size: 1.5rem; }
   .toast-container.info {
     background-color: var(--toast-info-background-color);
