@@ -1961,9 +1961,6 @@ nav {
   nav.shadow {
     box-shadow: var(--navbar-box-shadow); }
 
-nav.index-page .left .toggle-menu-icon {
-  display: none; }
-
 nav .left {
   display: flex;
   height: 100%;
