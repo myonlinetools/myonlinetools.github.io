@@ -134,7 +134,7 @@ body {
   --cookies-consentement-button-color: #000;
   --how-to-use-this-application-header-color: #303030;
   --how-to-use-this-application-body-color: #5c5c5c;
-  --tool-card-background-color: var(--background-color-03);
+  --tool-card-background-color: var(--background-color-01);
   --tool-card-background-color-on-hover: var(--background-color-04);
   --menu-background-color: var(--background-color-03);
   --menu-item-color: var(--text-color-03);
@@ -154,7 +154,9 @@ body {
   --color-picker-tool-background-color: var(--background-color-03);
   --color-picker-background-color: var(--background-color-01);
   --color-conversion-background-color: var(--background-color-04);
-  --color-picker-tool-section-background-color: var(--background-color-01); }
+  --color-picker-tool-section-background-color: var(--background-color-01);
+  --page-background-color: var(--background-color-03);
+  --main-section-background-color: var(--background-color-01); }
 
 body.dark {
   --primary-color: #2478e6;
@@ -294,9 +296,9 @@ body.dark {
   --cookies-consentement-button-background-color: var(--background-color-04);
   --how-to-use-this-application-header-color: #eaeaea;
   --how-to-use-this-application-body-color: #b7b7b7;
-  --tool-card-background-color: var(--background-color-03);
+  --tool-card-background-color: var(--background-color-02);
   --tool-card-background-color-on-hover: var(--background-color-04);
-  --menu-background-color: var(--background-color-02);
+  --menu-background-color: var(--background-color-03);
   --menu-item-color: var(--text-color-03);
   --menu-item-background-color-on-hover: var(--background-color-04);
   --menu-item-background-color-on-selected: var(--background-color-05);
@@ -314,7 +316,9 @@ body.dark {
   --color-picker-tool-background-color: var(--background-color-01);
   --color-picker-background-color: var(--background-color-02);
   --color-conversion-background-color: var(--background-color-05);
-  --color-picker-tool-section-background-color: var(--background-color-03); }
+  --color-picker-tool-section-background-color: var(--background-color-03);
+  --page-background-color: var(--background-color-03);
+  --main-section-background-color: var(--background-color-02); }
 
 *,
 *::after,
@@ -508,6 +512,26 @@ input {
 
 .transparent-background {
   background: var(--transparent-background) !important; }
+
+.page-container {
+  display: flex;
+  background-color: var(--page-background-color); }
+
+.main-container {
+  width: 100%;
+  max-width: 105rem;
+  margin: 0 auto;
+  padding: 5rem;
+  min-height: calc(100vh - var(--navbar-height)); }
+
+.main-section {
+  margin-top: 3rem;
+  padding: 3.5rem;
+  border-radius: 1rem;
+  background-color: var(--main-section-background-color); }
+  .main-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem; }
 
 @font-face {
   font-family: 'Anonymous Pro';
@@ -1855,20 +1879,6 @@ input {
   #bmc-wbtn > img {
     width: 3rem !important;
     height: 3rem !important; }
-
-body {
-  display: flex;
-  flex-direction: column; }
-
-.page-container {
-  display: flex; }
-
-.main-container {
-  width: 100%;
-  max-width: 105rem;
-  margin: 0 auto;
-  padding: 5rem;
-  min-height: calc(100vh - var(--navbar-height)); }
 
 .icon-button {
   cursor: pointer;
