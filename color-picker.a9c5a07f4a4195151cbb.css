@@ -2680,6 +2680,12 @@ body.big-menu .collapse-menu .right-arrow {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .palette-container .palette-color.ondrag {
+    opacity: 0.3; }
+    .palette-container .palette-color.ondrag .palette-color-value,
+    .palette-container .palette-color.ondrag .remove-button,
+    .palette-container .palette-color.ondrag .copy-button {
+      opacity: 0 !important; }
 
 .palette-container .palette-color-value {
   transition: opacity 0.15s ease-in-out;
