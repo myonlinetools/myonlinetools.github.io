@@ -344,7 +344,7 @@ body {
   --border-radius: 0.3rem;
   --navbar-height: 5rem;
   --footer-height: 5rem;
-  --left-width: 5rem;
+  --left-width: 0;
   --font-family: 'Poppins', sans-serif;
   --page-padding-top: 6rem;
   --page-width: 68%;
@@ -1935,7 +1935,6 @@ footer {
   transition-property: color, background-color;
   padding: var(--footer-padding);
   height: var(--footer-height);
-  border-top: 2px solid var(--border-color);
   display: flex;
   align-items: center; }
   footer a,
@@ -1946,7 +1945,7 @@ footer {
     margin-left: 5rem; }
 
 nav {
-  background-color: var(--navbar-background-color);
+  background-color: var(--background-color-01);
   z-index: var(--navbar-z-index);
   position: -webkit-sticky;
   position: sticky;
@@ -1958,27 +1957,23 @@ nav {
   justify-content: space-between;
   transition: var(--transition);
   transition-property: color, background-color, box-shadow;
-  border-bottom: 2px solid var(--border-color); }
+  box-shadow: var(--box-shadow-02); }
   nav.shadow {
     box-shadow: var(--navbar-box-shadow); }
 
-nav.index-page .left {
-  overflow-x: inherit;
-  border-right: none;
-  width: initial; }
-  nav.index-page .left:hover {
-    background-color: initial; }
+nav.index-page .left .toggle-menu-icon {
+  display: none; }
 
 nav .left {
   display: flex;
   height: 100%;
-  flex-shrink: 0;
-  width: var(--left-width);
-  transition: width 0.25s ease-in;
-  overflow-x: hidden;
-  border-right: 2px solid var(--border-color); }
-  nav .left:hover {
-    background-color: var(--navbar-logo-background-color-on-hover); }
+  align-items: center; }
+  nav .left .toggle-menu-icon {
+    font-size: 2.6rem;
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    margin-left: 1rem; }
   nav .left a {
     padding: 0 2rem 0 1rem;
     display: flex;
@@ -1990,7 +1985,7 @@ nav .left {
   nav .left span {
     font-size: 1.7rem;
     font-weight: bold;
-    padding-left: 2rem;
+    padding-left: 1rem;
     color: var(--navbar-logo-text-color);
     transition: var(--transition);
     transition-property: color;
