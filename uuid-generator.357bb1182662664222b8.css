@@ -1861,41 +1861,17 @@ input {
     width: 3rem !important;
     height: 3rem !important; }
 
-.main-container {
-  max-width: 120rem; }
+.tool-container {
+  position: relative; }
 
-.tools-summary-mosaic-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
-
-.tool-summary-square-container {
-  min-width: 25rem;
-  height: 18rem;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  color: var(--body-color);
-  transition: var(--transition);
-  transition-property: color, background-color;
-  background-color: var(--tool-card-background-color);
-  margin-right: 2rem;
-  margin-bottom: 2rem; }
-  .tool-summary-square-container:hover {
-    color: var(--primary-color);
-    text-decoration: none;
-    background-color: var(--tool-card-background-color-on-hover); }
-    .tool-summary-square-container:hover .iconify {
-      color: var(--primary-color); }
-  .tool-summary-square-container .iconify {
-    font-size: 6rem;
-    margin-bottom: 2rem;
-    flex-shrink: 0; }
-  .tool-summary-square-container .name {
-    font-weight: 400; }
+.coming-soon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: 200;
+  text-transform: uppercase; }
 
 .icon-button {
   cursor: pointer;
@@ -2255,24 +2231,17 @@ body.dark {
   --menu-item-background-color-on-hover: var(--background-color-04);
   --menu-item-background-color-on-selected: var(--background-color-04); }
 
-.tools-summary-menu-with-collapse-button-container {
+.tools-summary-menu-container {
   flex-shrink: 0;
   width: var(--left-width);
   transition: width 0.25s ease-in;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-color: var(--menu-background-color);
   height: calc(100vh - var(--navbar-height));
   position: -webkit-sticky;
   position: sticky;
-  top: var(--navbar-height); }
-
-.tools-summary-menu-container {
+  top: var(--navbar-height);
   padding: 1.5rem 0;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; }
+  overflow: scroll; }
   .tools-summary-menu-container::-webkit-scrollbar {
     background-color: var(--menu-background-color);
     width: 1.4rem; }
@@ -2281,12 +2250,12 @@ body.dark {
   .tools-summary-menu-container .tool-summary-menu-item-container {
     display: flex;
     align-items: center;
-    padding: 0.35rem 1rem 0.35rem 0.4rem;
+    padding: 0.35rem 1rem 0.35rem 1rem;
     color: var(--menu-item-color);
     transition: var(--transition);
     overflow-x: hidden;
     flex-shrink: 0;
-    margin: 0.2rem 0.4rem 0.2rem 0.6rem; }
+    margin: 0.2rem 0.5rem; }
     .tools-summary-menu-container .tool-summary-menu-item-container.selected {
       background-color: var(--menu-item-background-color-on-selected); }
       .tools-summary-menu-container .tool-summary-menu-item-container.selected .iconify,
@@ -2296,42 +2265,8 @@ body.dark {
     .tools-summary-menu-container .tool-summary-menu-item-container:hover {
       text-decoration: none;
       background-color: var(--menu-item-background-color-on-hover); }
-    .tools-summary-menu-container .tool-summary-menu-item-container .iconify {
-      font-size: 2.4rem;
-      margin-right: 2rem;
-      flex-shrink: 0; }
     .tools-summary-menu-container .tool-summary-menu-item-container .name {
       font-size: 1.45rem;
       font-weight: 400;
       white-space: nowrap; }
-
-.collapse-menu {
-  cursor: pointer;
-  padding-left: 1.4rem;
-  height: var(--footer-height);
-  display: flex;
-  align-items: center;
-  border-top: 2px solid var(--border-color);
-  overflow-x: hidden;
-  flex-shrink: 0; }
-  .collapse-menu:hover {
-    background-color: var(--collapse-menu-background-color-on-hover); }
-  .collapse-menu .iconify {
-    font-size: 2.3rem;
-    margin-right: 1.5rem;
-    flex-shrink: 0; }
-  .collapse-menu .left-arrow {
-    display: none; }
-  .collapse-menu .right-arrow {
-    display: initial; }
-  .collapse-menu p {
-    font-size: 1.45rem;
-    white-space: nowrap;
-    margin-bottom: 0; }
-
-body.big-menu .collapse-menu .left-arrow {
-  display: initial; }
-
-body.big-menu .collapse-menu .right-arrow {
-  display: none; }
 
