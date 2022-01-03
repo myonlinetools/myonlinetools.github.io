@@ -2550,6 +2550,7 @@ body.dark {
   grid-column-gap: 2.5rem; }
 
 .color-conversions-container .color-conversion {
+  cursor: pointer;
   border-radius: 0.3rem;
   padding: 1rem 1.8rem;
   display: flex;
@@ -2561,6 +2562,21 @@ body.dark {
     font-size: 1.7rem; }
   .color-conversions-container .color-conversion .label {
     font-weight: 600; }
+  .color-conversions-container .color-conversion .color-value-container {
+    display: flex;
+    align-items: center; }
+    .color-conversions-container .color-conversion .color-value-container .iconify {
+      transition: opacity 0.2s ease-in;
+      opacity: 0;
+      font-size: 1.8rem;
+      margin-right: 1rem; }
+  .color-conversions-container .color-conversion:hover .iconify {
+    opacity: 0.8; }
+  .color-conversions-container .color-conversion .label,
+  .color-conversions-container .color-conversion .color-value-container,
+  .color-conversions-container .color-conversion .iconify,
+  .color-conversions-container .color-conversion .color-value {
+    pointer-events: none; }
 
 .color-variations-container h3 {
   margin-top: 2rem;
