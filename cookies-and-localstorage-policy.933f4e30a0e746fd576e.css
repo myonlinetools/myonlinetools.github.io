@@ -1861,17 +1861,17 @@ input {
     width: 3rem !important;
     height: 3rem !important; }
 
-.tool-container {
-  position: relative; }
+.main-container {
+  padding-top: 0; }
 
-.coming-soon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 4rem;
-  font-weight: 200;
-  text-transform: uppercase; }
+h1 {
+  margin: 0 0 4rem; }
+
+.main-section {
+  padding: 7rem; }
+
+h2 {
+  margin: 4rem 0; }
 
 .icon-button {
   cursor: pointer;
@@ -2241,7 +2241,7 @@ body.dark {
   position: sticky;
   top: var(--navbar-height);
   padding: 1.5rem 0;
-  overflow: scroll; }
+  overflow: hidden; }
   .tools-summary-menu-container::-webkit-scrollbar {
     background-color: var(--menu-background-color);
     width: 1.4rem; }
@@ -2253,7 +2253,6 @@ body.dark {
     padding: 0.35rem 1rem 0.35rem 1rem;
     color: var(--menu-item-color);
     transition: var(--transition);
-    overflow-x: hidden;
     flex-shrink: 0;
     margin: 0.2rem 0.5rem; }
     .tools-summary-menu-container .tool-summary-menu-item-container.selected {
