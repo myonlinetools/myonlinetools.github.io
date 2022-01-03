@@ -2629,6 +2629,9 @@ body.dark {
   .palette-container h2 .generate-button {
     margin-left: 1rem; }
 
+.palette-container a {
+  opacity: 0; }
+
 .palette-container .empty-palette {
   width: 100%;
   display: flex;
