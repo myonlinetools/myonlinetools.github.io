@@ -136,11 +136,6 @@ body {
   --how-to-use-this-application-body-color: #5c5c5c;
   --tool-card-background-color: var(--background-color-01);
   --tool-card-background-color-on-hover: var(--background-color-04);
-  --menu-background-color: var(--background-color-03);
-  --menu-item-color: var(--text-color-03);
-  --menu-item-background-color-on-hover: var(--background-color-04);
-  --menu-item-background-color-on-selected: var(--background-color-05);
-  --collapse-menu-background-color-on-hover: var(--background-color-05);
   --button-secondary-background-color: var(--background-color-04);
   --button-secondary-color: var(--text-color-03);
   --text-to-add-textarea-label-color: var(--text-color-03);
@@ -171,7 +166,7 @@ body.dark {
   --text-color-04: #b1b1b1;
   --text-color-05: #a0a0a0;
   --text-color-06: #747070;
-  --background-color-01: #181a1f;
+  --background-color-01: #1d1e22;
   --background-color-02: #21252b;
   --background-color-03: #282c34;
   --background-color-04: #2c313a;
@@ -298,11 +293,6 @@ body.dark {
   --how-to-use-this-application-body-color: #b7b7b7;
   --tool-card-background-color: var(--background-color-02);
   --tool-card-background-color-on-hover: var(--background-color-04);
-  --menu-background-color: var(--background-color-03);
-  --menu-item-color: var(--text-color-03);
-  --menu-item-background-color-on-hover: var(--background-color-04);
-  --menu-item-background-color-on-selected: var(--background-color-05);
-  --collapse-menu-background-color-on-hover: var(--background-color-04);
   --button-secondary-background-color: var(--background-color-04);
   --button-secondary-color: var(--text-color-03);
   --text-to-add-textarea-label-color: var(--text-color-03);
@@ -455,21 +445,12 @@ p {
     background-position: 100% 50%; } }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 400;
   margin-top: 2.8rem;
   margin-bottom: 2rem;
   position: relative;
   color: var(--how-to-use-this-application-header-color); }
-  h1::before {
-    content: '';
-    position: absolute;
-    bottom: -0.2rem;
-    left: 0;
-    width: 7rem;
-    height: 0.45rem;
-    background-color: var(--secondary-color);
-    border-radius: 100rem; }
 
 p {
   text-align: justify;
@@ -2262,6 +2243,18 @@ nav .right {
   color: #ff4a59;
   font-size: 1.5rem; }
 
+body {
+  --menu-background-color: var(--background-color-01);
+  --menu-item-color: var(--text-color-03);
+  --menu-item-background-color-on-hover: var(--background-color-04);
+  --menu-item-background-color-on-selected: var(--background-color-04); }
+
+body.dark {
+  --menu-background-color: var(--background-color-01);
+  --menu-item-color: var(--text-color-03);
+  --menu-item-background-color-on-hover: var(--background-color-04);
+  --menu-item-background-color-on-selected: var(--background-color-04); }
+
 .tools-summary-menu-with-collapse-button-container {
   flex-shrink: 0;
   width: var(--left-width);
@@ -2273,8 +2266,7 @@ nav .right {
   height: calc(100vh - var(--navbar-height));
   position: -webkit-sticky;
   position: sticky;
-  top: var(--navbar-height);
-  border-right: 2px solid var(--border-color); }
+  top: var(--navbar-height); }
 
 .tools-summary-menu-container {
   padding: 1.5rem 0;
