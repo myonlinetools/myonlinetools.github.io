@@ -1861,17 +1861,17 @@ input {
     width: 3rem !important;
     height: 3rem !important; }
 
-.main-container {
-  padding-top: 0; }
+.tool-container {
+  position: relative; }
 
-h1 {
-  margin: 0 0 4rem; }
-
-.main-section {
-  padding: 7rem; }
-
-h2 {
-  margin: 4rem 0; }
+.coming-soon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: 200;
+  text-transform: uppercase; }
 
 .icon-button {
   cursor: pointer;
@@ -1969,15 +1969,17 @@ nav {
 nav .left {
   display: flex;
   height: 100%;
-  align-items: center; }
+  align-items: center;
+  margin-left: 1.5rem; }
   nav .left .toggle-menu-icon {
     font-size: 2.6rem;
     display: flex;
     align-items: center;
-    margin-right: 2rem;
-    margin-left: 1rem; }
+    margin-right: 1.5rem;
+    margin-left: 0.5rem; }
+    nav .left .toggle-menu-icon .iconify {
+      font-size: 3rem; }
   nav .left a {
-    padding: 0 2rem 0 1rem;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -2223,17 +2225,15 @@ body {
   --menu-background-color: var(--background-color-01);
   --menu-item-color: var(--text-color-03);
   --menu-item-background-color-on-hover: var(--background-color-04);
-  --menu-item-background-color-on-selected: var(--background-color-04); }
+  --menu-item-background-color-on-selected: var(--background-color-04);
+  --collapse-menu-background-color-on-hover: var(--background-color-04); }
 
 body.dark {
   --menu-background-color: var(--background-color-01);
   --menu-item-color: var(--text-color-03);
   --menu-item-background-color-on-hover: var(--background-color-04);
-  --menu-item-background-color-on-selected: var(--background-color-04); }
-
-body.index-page .tools-summary-menu-with-collapse-button-container,
-body.index-page .show-menu-button {
-  display: none; }
+  --menu-item-background-color-on-selected: var(--background-color-04);
+  --collapse-menu-background-color-on-hover: var(--background-color-04); }
 
 .tools-summary-menu-with-collapse-button-container {
   z-index: 2;
@@ -2266,7 +2266,8 @@ body.index-page .show-menu-button {
     color: var(--menu-item-color);
     transition: var(--transition);
     flex-shrink: 0;
-    margin: 0.2rem 0.5rem; }
+    margin: 0.2rem 0.5rem;
+    overflow: hidden; }
     .tools-summary-menu-container .tool-summary-menu-item-container.selected {
       background-color: var(--menu-item-background-color-on-selected); }
       .tools-summary-menu-container .tool-summary-menu-item-container.selected .iconify,
@@ -2277,9 +2278,13 @@ body.index-page .show-menu-button {
       text-decoration: none;
       background-color: var(--menu-item-background-color-on-hover); }
     .tools-summary-menu-container .tool-summary-menu-item-container .name {
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       font-weight: 400;
-      white-space: nowrap; }
+      white-space: nowrap;
+      margin-left: 1.5rem; }
+    .tools-summary-menu-container .tool-summary-menu-item-container .iconify {
+      flex-shrink: 0;
+      font-size: 2.4rem; }
 
 .hide-menu-button {
   cursor: pointer;
@@ -2299,37 +2304,4 @@ body.index-page .show-menu-button {
     font-size: 1.45rem;
     white-space: nowrap;
     margin-bottom: 0; }
-
-body.beg-menu .show-menu-button {
-  display: none; }
-
-.show-menu-button {
-  background-color: var(--background-color-05);
-  display: flex;
-  align-items: center;
-  z-index: 1;
-  transition: all 0.25s ease-in;
-  cursor: pointer;
-  width: 3rem;
-  position: fixed;
-  left: 0;
-  bottom: 1.5rem;
-  padding: 1rem 0;
-  padding-left: 0.1rem;
-  border-bottom-right-radius: 100rem;
-  border-top-right-radius: 100rem;
-  overflow: hidden; }
-  .show-menu-button .text {
-    transition: all 0.25s ease-in;
-    margin-left: 1rem;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 1.5rem; }
-  .show-menu-button .iconify {
-    transition: all 0.25s ease-in;
-    flex-shrink: 0;
-    font-size: 2.3rem; }
-  .show-menu-button:hover {
-    width: 14.5rem;
-    padding: 1rem; }
 
