@@ -2260,20 +2260,21 @@ body.dark {
   .tools-summary-menu-container:hover {
     overflow: overlay; }
   .tools-summary-menu-container .tool-summary-menu-item-container {
+    border-radius: 0;
     display: flex;
     align-items: center;
-    padding: 0.35rem 1rem 0.35rem 1rem;
+    padding: 0.65rem 1rem 0.65rem 1rem;
     color: var(--menu-item-color);
     transition: var(--transition);
     flex-shrink: 0;
-    margin: 0.2rem 0.5rem;
-    overflow: hidden; }
+    border: none;
+    border-left: 0.7rem solid transparent; }
     .tools-summary-menu-container .tool-summary-menu-item-container.selected {
-      background-color: var(--menu-item-background-color-on-selected); }
-      .tools-summary-menu-container .tool-summary-menu-item-container.selected .iconify,
-      .tools-summary-menu-container .tool-summary-menu-item-container.selected .name {
-        color: var(--primary-color);
-        font-weight: bold; }
+      border-left-color: var(--secondary-color); }
+      .tools-summary-menu-container .tool-summary-menu-item-container.selected .name,
+      .tools-summary-menu-container .tool-summary-menu-item-container.selected .iconify {
+        color: var(--secondary-color);
+        font-weight: 600; }
     .tools-summary-menu-container .tool-summary-menu-item-container:hover {
       text-decoration: none;
       background-color: var(--menu-item-background-color-on-hover); }

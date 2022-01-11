@@ -1862,16 +1862,40 @@ input {
     height: 3rem !important; }
 
 .main-container {
-  padding-top: 0; }
+  max-width: 120rem; }
 
-h1 {
-  margin: 0 0 4rem; }
+.tools-summary-mosaic-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
 
-.main-section {
-  padding: 7rem; }
-
-h2 {
-  margin: 4rem 0; }
+.tool-summary-square-container {
+  min-width: 25rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  color: var(--body-color);
+  transition: var(--transition);
+  transition-property: color, background-color;
+  background-color: var(--tool-card-background-color);
+  margin-right: 2rem;
+  margin-bottom: 2rem; }
+  .tool-summary-square-container:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+    background-color: var(--tool-card-background-color-on-hover); }
+    .tool-summary-square-container:hover .iconify {
+      color: var(--primary-color); }
+  .tool-summary-square-container .iconify {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    flex-shrink: 0; }
+  .tool-summary-square-container .name {
+    font-weight: 400; }
 
 .icon-button {
   cursor: pointer;
@@ -2260,20 +2284,21 @@ body.dark {
   .tools-summary-menu-container:hover {
     overflow: overlay; }
   .tools-summary-menu-container .tool-summary-menu-item-container {
+    border-radius: 0;
     display: flex;
     align-items: center;
-    padding: 0.35rem 1rem 0.35rem 1rem;
+    padding: 0.65rem 1rem 0.65rem 1rem;
     color: var(--menu-item-color);
     transition: var(--transition);
     flex-shrink: 0;
-    margin: 0.2rem 0.5rem;
-    overflow: hidden; }
+    border: none;
+    border-left: 0.7rem solid transparent; }
     .tools-summary-menu-container .tool-summary-menu-item-container.selected {
-      background-color: var(--menu-item-background-color-on-selected); }
-      .tools-summary-menu-container .tool-summary-menu-item-container.selected .iconify,
-      .tools-summary-menu-container .tool-summary-menu-item-container.selected .name {
-        color: var(--primary-color);
-        font-weight: bold; }
+      border-left-color: var(--secondary-color); }
+      .tools-summary-menu-container .tool-summary-menu-item-container.selected .name,
+      .tools-summary-menu-container .tool-summary-menu-item-container.selected .iconify {
+        color: var(--secondary-color);
+        font-weight: 600; }
     .tools-summary-menu-container .tool-summary-menu-item-container:hover {
       text-decoration: none;
       background-color: var(--menu-item-background-color-on-hover); }
