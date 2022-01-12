@@ -1861,17 +1861,17 @@ input {
     width: 3rem !important;
     height: 3rem !important; }
 
-.main-container {
-  padding-top: 0; }
+.tool-container {
+  position: relative; }
 
-h1 {
-  margin: 0 0 4rem; }
-
-.main-section {
-  padding: 7rem; }
-
-h2 {
-  margin: 4rem 0; }
+.coming-soon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: 200;
+  text-transform: uppercase; }
 
 .icon-button {
   cursor: pointer;
@@ -2271,8 +2271,9 @@ body.dark {
     flex-shrink: 0;
     border: none;
     border-left: 0.7rem solid transparent; }
+    .tools-summary-menu-container .tool-summary-menu-item-container.selected, .tools-summary-menu-container .tool-summary-menu-item-container:active {
+      border-left-color: var(--secondary-color) !important; }
     .tools-summary-menu-container .tool-summary-menu-item-container.selected {
-      border-left-color: var(--secondary-color);
       background-color: var(--selected-menu-item-background-color); }
       .tools-summary-menu-container .tool-summary-menu-item-container.selected .name,
       .tools-summary-menu-container .tool-summary-menu-item-container.selected .iconify {

@@ -2259,8 +2259,9 @@ body.dark {
     flex-shrink: 0;
     border: none;
     border-left: 0.7rem solid transparent; }
+    .tools-summary-menu-container .tool-summary-menu-item-container.selected, .tools-summary-menu-container .tool-summary-menu-item-container:active {
+      border-left-color: var(--secondary-color) !important; }
     .tools-summary-menu-container .tool-summary-menu-item-container.selected {
-      border-left-color: var(--secondary-color);
       background-color: var(--selected-menu-item-background-color); }
       .tools-summary-menu-container .tool-summary-menu-item-container.selected .name,
       .tools-summary-menu-container .tool-summary-menu-item-container.selected .iconify {
