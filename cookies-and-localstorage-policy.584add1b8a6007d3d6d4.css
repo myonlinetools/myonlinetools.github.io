@@ -424,6 +424,9 @@ p {
 .hidden {
   display: none !important; }
 
+.overflow-hidden {
+  overflow: hidden; }
+
 .pre-load {
   background: var(--pre-load-background);
   background-size: 600% 600%;
@@ -496,6 +499,9 @@ input {
 .page-container {
   display: flex;
   background-color: var(--page-background-color); }
+  .page-container.onloading {
+    height: 0;
+    overflow: hidden; }
 
 .main-container {
   width: 100%;
