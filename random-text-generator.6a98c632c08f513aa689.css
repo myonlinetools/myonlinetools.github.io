@@ -327,6 +327,9 @@ body.dark {
   border-radius: 100rem;
   background-color: var(--scrollbar-color); }
 
+body.scrollbar-hidden::-webkit-scrollbar {
+  display: none; }
+
 *:focus-visible {
   outline: none;
   border-color: var(--focus-color) !important; }
@@ -343,17 +346,17 @@ body {
   --page-width: 68%;
   --main-margin: 0 3rem;
   --ads-width: 20rem;
-  --navbar-z-index: 30000000;
-  --cookies-consentement-z-index: 5000000;
-  --color-picker-z-index: 3000000;
-  --side-panel-z-index: 1000000;
-  --ads-blocker-message-z-index: 300000;
-  --toast-z-index: 100000;
-  --buy-me-a-coffee-z-index: 100000;
-  --dialog-z-index: 1000;
-  --text-to-type-training-arrow-z-index: 200;
-  --select-z-index: 100;
-  --toggle-typing-button-z-index: 100; }
+  --toast-z-index: 11;
+  --side-panel-z-index: 10;
+  --navbar-z-index: 9;
+  --cookies-consentement-z-index: 8;
+  --color-picker-z-index: 7;
+  --ads-blocker-message-z-index: 6;
+  --buy-me-a-coffee-z-index: 5;
+  --dialog-z-index: 3;
+  --text-to-type-training-arrow-z-index: 2;
+  --select-z-index: 1;
+  --toggle-typing-button-z-index: 1; }
   html.big-menu,
   body.big-menu {
     --left-width: 26rem; }
@@ -2150,6 +2153,7 @@ nav .right {
     left: 0;
     bottom: 0; }
   .container .side-panel-container {
+    overflow: auto;
     --side-panel-width: 40rem;
     box-shadow: var(--box-shadow-02);
     padding: 2rem;
