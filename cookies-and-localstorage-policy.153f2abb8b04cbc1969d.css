@@ -327,7 +327,6 @@ body.dark {
   border-radius: 100rem;
   background-color: var(--scrollbar-color); }
 
-*:focus,
 *:focus-visible {
   outline: none;
   border-color: var(--focus-color) !important; }
@@ -1862,40 +1861,16 @@ input {
     height: 3rem !important; }
 
 .main-container {
-  max-width: 120rem; }
+  padding-top: 0; }
 
-.tools-summary-mosaic-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
+h1 {
+  margin: 0 0 4rem; }
 
-.tool-summary-square-container {
-  min-width: 25rem;
-  height: 18rem;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  color: var(--body-color);
-  transition: var(--transition);
-  transition-property: color, background-color;
-  background-color: var(--tool-card-background-color);
-  margin-right: 2rem;
-  margin-bottom: 2rem; }
-  .tool-summary-square-container:hover {
-    color: var(--primary-color);
-    text-decoration: none;
-    background-color: var(--tool-card-background-color-on-hover); }
-    .tool-summary-square-container:hover .iconify {
-      color: var(--primary-color); }
-  .tool-summary-square-container .iconify {
-    font-size: 6rem;
-    margin-bottom: 2rem;
-    flex-shrink: 0; }
-  .tool-summary-square-container .name {
-    font-weight: 400; }
+.main-section {
+  padding: 7rem; }
+
+h2 {
+  margin: 4rem 0; }
 
 .icon-button {
   cursor: pointer;
@@ -2295,9 +2270,8 @@ body.dark {
     flex-shrink: 0;
     border: none;
     border-left: 0.7rem solid transparent; }
-    .tools-summary-menu-container .tool-summary-menu-item-container.selected, .tools-summary-menu-container .tool-summary-menu-item-container:active {
-      border-left-color: var(--secondary-color) !important; }
     .tools-summary-menu-container .tool-summary-menu-item-container.selected {
+      border-left-color: var(--secondary-color) !important;
       background-color: var(--selected-menu-item-background-color); }
       .tools-summary-menu-container .tool-summary-menu-item-container.selected .name,
       .tools-summary-menu-container .tool-summary-menu-item-container.selected .iconify {
