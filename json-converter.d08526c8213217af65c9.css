@@ -2236,7 +2236,8 @@ body {
   --menu-item-background-color-on-hover: var(--background-color-04);
   --menu-item-background-color-on-selected: var(--background-color-04);
   --collapse-menu-background-color-on-hover: var(--background-color-04);
-  --selected-menu-item-background-color: #f5717314; }
+  --selected-menu-item-background-color: #f5717314;
+  --menu-item-border-color-on-hover: #bbb; }
 
 body.dark {
   --menu-background-color: var(--background-color-01);
@@ -2244,7 +2245,8 @@ body.dark {
   --menu-item-background-color-on-hover: var(--background-color-04);
   --menu-item-background-color-on-selected: var(--background-color-04);
   --collapse-menu-background-color-on-hover: var(--background-color-04);
-  --selected-menu-item-background-color: #f5717314; }
+  --selected-menu-item-background-color: #f5717314;
+  --menu-item-border-color-on-hover: #aaa; }
 
 .tools-summary-menu-with-collapse-button-container {
   z-index: 2;
@@ -2269,6 +2271,7 @@ body.dark {
     background-color: var(--menu-background-color);
     width: 1.4rem; }
   .tools-summary-menu-container:hover {
+    overflow: auto;
     overflow: overlay; }
   .tools-summary-menu-container .tool-summary-menu-item-container {
     border-radius: 0;
@@ -2289,7 +2292,8 @@ body.dark {
         font-weight: 600; }
     .tools-summary-menu-container .tool-summary-menu-item-container:hover {
       text-decoration: none;
-      background-color: var(--menu-item-background-color-on-hover); }
+      background-color: var(--menu-item-background-color-on-hover);
+      border-left-color: var(--menu-item-border-color-on-hover) !important; }
     .tools-summary-menu-container .tool-summary-menu-item-container .name {
       font-size: 1.45rem;
       font-weight: 400;

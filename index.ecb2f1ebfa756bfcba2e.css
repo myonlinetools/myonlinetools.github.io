@@ -1869,17 +1869,41 @@ input {
     width: 3rem !important;
     height: 3rem !important; }
 
-.tool-container {
-  position: relative; }
+.main-container {
+  max-width: 120rem; }
 
-.coming-soon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 4rem;
-  font-weight: 200;
-  text-transform: uppercase; }
+.tools-summary-mosaic-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.tool-summary-square-container {
+  min-width: 25rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  color: var(--body-color);
+  transition: var(--transition);
+  transition-property: color, background-color;
+  background-color: var(--tool-card-background-color);
+  margin-right: 2rem;
+  margin-bottom: 2rem; }
+  .tool-summary-square-container:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+    background-color: var(--tool-card-background-color-on-hover); }
+    .tool-summary-square-container:hover .iconify {
+      color: var(--primary-color); }
+  .tool-summary-square-container .iconify {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    flex-shrink: 0; }
+  .tool-summary-square-container .name {
+    font-weight: 400; }
 
 .icon-button {
   cursor: pointer;
@@ -2236,7 +2260,8 @@ body {
   --menu-item-background-color-on-hover: var(--background-color-04);
   --menu-item-background-color-on-selected: var(--background-color-04);
   --collapse-menu-background-color-on-hover: var(--background-color-04);
-  --selected-menu-item-background-color: #f5717314; }
+  --selected-menu-item-background-color: #f5717314;
+  --menu-item-border-color-on-hover: #bbb; }
 
 body.dark {
   --menu-background-color: var(--background-color-01);
@@ -2244,7 +2269,8 @@ body.dark {
   --menu-item-background-color-on-hover: var(--background-color-04);
   --menu-item-background-color-on-selected: var(--background-color-04);
   --collapse-menu-background-color-on-hover: var(--background-color-04);
-  --selected-menu-item-background-color: #f5717314; }
+  --selected-menu-item-background-color: #f5717314;
+  --menu-item-border-color-on-hover: #aaa; }
 
 .tools-summary-menu-with-collapse-button-container {
   z-index: 2;
@@ -2269,6 +2295,7 @@ body.dark {
     background-color: var(--menu-background-color);
     width: 1.4rem; }
   .tools-summary-menu-container:hover {
+    overflow: auto;
     overflow: overlay; }
   .tools-summary-menu-container .tool-summary-menu-item-container {
     border-radius: 0;
@@ -2289,7 +2316,8 @@ body.dark {
         font-weight: 600; }
     .tools-summary-menu-container .tool-summary-menu-item-container:hover {
       text-decoration: none;
-      background-color: var(--menu-item-background-color-on-hover); }
+      background-color: var(--menu-item-background-color-on-hover);
+      border-left-color: var(--menu-item-border-color-on-hover) !important; }
     .tools-summary-menu-container .tool-summary-menu-item-container .name {
       font-size: 1.45rem;
       font-weight: 400;
