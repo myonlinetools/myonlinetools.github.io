@@ -20,9 +20,15 @@
     */
     (function () {
       // DON'T EDIT BELOW THIS LINE
-      var d = document,
-        s = d.createElement('script');
+      const s = document.createElement('script');
       s.src = 'https://myonlinetools.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();</script><script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="turbotyping" data-description="Support me on Buy me a coffee!" data-message="" data-color="#EEEEEE" data-position="Right" data-x_margin="10" data-y_margin="20"></script><script src="../touch-typing-training/touch-typing-training.c4da078b43fd52a33c84.js"></script></body></html>
+      (document.head || document.body).appendChild(s);
+    })();
+
+    // Disqus theme switching
+    document.addEventListener('change-theme-event', function (e) { 
+      if (document.readyState == 'complete') {
+        DISQUS.reset({ reload: true });
+      }
+    });</script><script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="turbotyping" data-description="Support me on Buy me a coffee!" data-message="" data-color="#EEEEEE" data-position="Right" data-x_margin="10" data-y_margin="20"></script><script src="../touch-typing-training/touch-typing-training.c4da078b43fd52a33c84.js"></script></body></html>
