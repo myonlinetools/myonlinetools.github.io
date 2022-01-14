@@ -340,7 +340,7 @@ body {
   --border-radius: 0.3rem;
   --navbar-height: 5rem;
   --footer-height: 5rem;
-  --left-width: 0;
+  --menu-width: 26rem;
   --font-family: 'Poppins', sans-serif;
   --page-padding-top: 6rem;
   --page-width: 68%;
@@ -357,9 +357,6 @@ body {
   --text-to-type-training-arrow-z-index: 2;
   --select-z-index: 1;
   --toggle-typing-button-z-index: 1; }
-  html.big-menu,
-  body.big-menu {
-    --left-width: 26rem; }
   @media screen and (max-width: 426px) {
     html,
     body {
@@ -1869,17 +1866,41 @@ input {
     width: 3rem !important;
     height: 3rem !important; }
 
-.tool-container {
-  position: relative; }
+.main-container {
+  max-width: 120rem; }
 
-.coming-soon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 4rem;
-  font-weight: 200;
-  text-transform: uppercase; }
+.tools-summary-mosaic-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.tool-summary-square-container {
+  min-width: 25rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  color: var(--body-color);
+  transition: var(--transition);
+  transition-property: color, background-color;
+  background-color: var(--tool-card-background-color);
+  margin-right: 2rem;
+  margin-bottom: 2rem; }
+  .tool-summary-square-container:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+    background-color: var(--tool-card-background-color-on-hover); }
+    .tool-summary-square-container:hover .iconify {
+      color: var(--primary-color); }
+  .tool-summary-square-container .iconify {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    flex-shrink: 0; }
+  .tool-summary-square-container .name {
+    font-weight: 400; }
 
 .icon-button {
   cursor: pointer;
@@ -1957,6 +1978,12 @@ footer {
     margin: 0;
     margin-left: 5rem; }
 
+body {
+  --navbar-separator-background-color: var(--background-color-05); }
+
+body.dark {
+  --navbar-separator-background-color: var(--background-color-05); }
+
 nav {
   background-color: var(--background-color-01);
   z-index: var(--navbar-z-index);
@@ -1975,10 +2002,16 @@ nav {
     box-shadow: var(--navbar-box-shadow); }
 
 nav .left {
+  flex-grow: 1;
+  flex-basis: 0;
   display: flex;
   height: 100%;
-  align-items: center;
-  margin-left: 1.5rem; }
+  align-items: center; }
+  nav .left .toggle-menu-icon-and-logo-container {
+    width: var(--menu-width);
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem; }
   nav .left .toggle-menu-icon {
     font-size: 2.6rem;
     display: flex;
@@ -2017,6 +2050,8 @@ nav .left {
       color: var(--primary-color); }
 
 nav .right {
+  flex-grow: 1;
+  flex-basis: 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -2041,6 +2076,48 @@ nav .right {
 @media only screen and (max-width: 768px) {
   nav .right > select {
     display: none; } }
+
+.navbar-separator {
+  flex-shrink: 0;
+  height: 34px;
+  width: 4px;
+  border-radius: 100rem;
+  background-color: var(--navbar-separator-background-color);
+  margin: 0px 25px; }
+
+body {
+  --tools-search-input-container-background-color: var(--background-color-03);
+  --tools-search-input-container-background-color-on-hover: var(--background-color-04); }
+
+body.dark {
+  --tools-search-input-container-background-color: var(--background-color-03);
+  --tools-search-input-container-background-color-on-hover: var(--background-color-04); }
+
+.tools-search-input-container {
+  background-color: var(--tools-search-input-container-background-color);
+  border-radius: 0.4rem;
+  padding: 0.5rem 1.2rem 0.5rem 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  transition: var(--transition);
+  transition-property: border-color, background-color; }
+  .tools-search-input-container:hover {
+    background-color: var(--tools-search-input-container-background-color-on-hover); }
+  .tools-search-input-container.focus {
+    border-color: var(--focus-color); }
+  .tools-search-input-container .iconify {
+    flex-shrink: 0;
+    margin-right: 0.7rem;
+    font-size: 1.7rem; }
+  .tools-search-input-container input {
+    border: none;
+    outline: none;
+    width: 30rem;
+    transition: width 0.25s linear; }
+  .tools-search-input-container.focus input {
+    width: 40rem; }
 
 .feedback-form {
   flex: 1;
@@ -2248,10 +2325,13 @@ body.dark {
   --selected-menu-item-background-color: #f5717314;
   --menu-item-border-color-on-hover: #aaa; }
 
+body.hide-menu .tools-summary-menu-with-collapse-button-container {
+  width: 0; }
+
 .tools-summary-menu-with-collapse-button-container {
   z-index: 2;
   flex-shrink: 0;
-  width: var(--left-width);
+  width: var(--menu-width);
   transition: width 0.25s ease-in;
   display: flex;
   flex-direction: column;
