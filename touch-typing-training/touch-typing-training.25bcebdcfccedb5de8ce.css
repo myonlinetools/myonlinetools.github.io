@@ -505,9 +505,10 @@ input {
 
 .main-container {
   width: 100%;
-  max-width: 105rem;
+  max-width: 110rem;
   margin: 0 auto;
   padding: 5rem;
+  padding-top: 0;
   min-height: calc(100vh - var(--navbar-height)); }
 
 .main-section {

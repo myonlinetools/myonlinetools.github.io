@@ -505,9 +505,10 @@ input {
 
 .main-container {
   width: 100%;
-  max-width: 105rem;
+  max-width: 110rem;
   margin: 0 auto;
   padding: 5rem;
+  padding-top: 0;
   min-height: calc(100vh - var(--navbar-height)); }
 
 .main-section {
@@ -1867,16 +1868,40 @@ input {
     height: 3rem !important; }
 
 .main-container {
-  padding-top: 0; }
+  max-width: 120rem; }
 
-h1 {
-  margin: 0 0 4rem; }
+.tools-summary-mosaic-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
 
-.main-section {
-  padding: 7rem; }
-
-h2 {
-  margin: 4rem 0; }
+.tool-summary-square-container {
+  min-width: 25rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  color: var(--body-color);
+  transition: var(--transition);
+  transition-property: color, background-color;
+  background-color: var(--tool-card-background-color);
+  margin-right: 2rem;
+  margin-bottom: 2rem; }
+  .tool-summary-square-container:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+    background-color: var(--tool-card-background-color-on-hover); }
+    .tool-summary-square-container:hover .iconify {
+      color: var(--primary-color); }
+  .tool-summary-square-container .iconify {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    flex-shrink: 0; }
+  .tool-summary-square-container .name {
+    font-weight: 400; }
 
 .icon-button {
   cursor: pointer;
