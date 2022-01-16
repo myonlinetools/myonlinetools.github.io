@@ -2096,6 +2096,130 @@ body.dark {
   .tools-search-input-container.focus input {
     width: 40rem; }
 
+body {
+  --menu-background-color: var(--background-color-01);
+  --menu-item-color: var(--text-color-03);
+  --menu-item-background-color-on-hover: var(--background-color-04);
+  --menu-item-background-color-on-selected: var(--background-color-04);
+  --collapse-menu-background-color-on-hover: var(--background-color-04);
+  --selected-menu-item-background-color: #f5717314;
+  --menu-item-border-color-on-hover: #bbb; }
+
+body.dark {
+  --menu-background-color: var(--background-color-01);
+  --menu-item-color: var(--text-color-03);
+  --menu-item-background-color-on-hover: var(--background-color-04);
+  --menu-item-background-color-on-selected: var(--background-color-04);
+  --collapse-menu-background-color-on-hover: var(--background-color-04);
+  --selected-menu-item-background-color: #f5717314;
+  --menu-item-border-color-on-hover: #aaa; }
+
+body.hide-menu .tools-summary-menu-with-collapse-button-container {
+  width: 0; }
+
+.tools-summary-menu-with-collapse-button-container {
+  z-index: 2;
+  flex-shrink: 0;
+  width: var(--menu-width);
+  transition: width 0.25s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--menu-background-color);
+  height: calc(100vh - var(--navbar-height));
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--navbar-height); }
+
+.tools-summary-menu-container {
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; }
+  .tools-summary-menu-container::-webkit-scrollbar {
+    background-color: var(--menu-background-color);
+    width: 1.4rem; }
+  .tools-summary-menu-container:hover {
+    overflow: auto;
+    overflow: overlay; }
+  .tools-summary-menu-container .tool-summary-menu-item-container {
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    color: var(--menu-item-color);
+    transition: var(--transition);
+    flex-shrink: 0;
+    border: none;
+    border-left: 0.7rem solid transparent; }
+    .tools-summary-menu-container .tool-summary-menu-item-container.selected {
+      border-left-color: var(--secondary-color) !important;
+      background-color: var(--selected-menu-item-background-color); }
+      .tools-summary-menu-container .tool-summary-menu-item-container.selected .name,
+      .tools-summary-menu-container .tool-summary-menu-item-container.selected .iconify {
+        color: var(--secondary-color);
+        font-weight: 600; }
+    .tools-summary-menu-container .tool-summary-menu-item-container:hover {
+      text-decoration: none;
+      background-color: var(--menu-item-background-color-on-hover);
+      border-left-color: var(--menu-item-border-color-on-hover); }
+    .tools-summary-menu-container .tool-summary-menu-item-container .name {
+      font-size: 1.45rem;
+      font-weight: 400;
+      white-space: nowrap;
+      margin-left: 1.5rem; }
+    .tools-summary-menu-container .tool-summary-menu-item-container .iconify {
+      flex-shrink: 0;
+      font-size: 2.4rem; }
+  .tools-summary-menu-container .search-result-header {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: var(--transition);
+    transition-property: height; }
+    .tools-summary-menu-container .search-result-header span {
+      font-size: 1.6rem;
+      font-weight: 700; }
+    .tools-summary-menu-container .search-result-header button {
+      font-size: 1.2rem;
+      font-weight: 600;
+      font-family: var(--font-family);
+      padding: 0.1rem 1.4rem;
+      border-radius: 100rem;
+      background-color: transparent;
+      color: var(--secondary-color);
+      border: 2px solid var(--secondary-color);
+      transition: var(--transition);
+      transition-property: color, background-color; }
+      .tools-summary-menu-container .search-result-header button:hover {
+        color: white;
+        background-color: var(--secondary-color); }
+  .tools-summary-menu-container .empty-search-result {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem; }
+
+.hide-menu-button {
+  cursor: pointer;
+  height: var(--footer-height);
+  display: flex;
+  align-items: center;
+  border-top: 2px solid var(--border-color);
+  overflow-x: hidden;
+  flex-shrink: 0; }
+  .hide-menu-button:hover {
+    background-color: var(--collapse-menu-background-color-on-hover); }
+  .hide-menu-button .iconify {
+    font-size: 2.3rem;
+    margin: 0 1.5rem;
+    flex-shrink: 0; }
+  .hide-menu-button p {
+    font-size: 1.45rem;
+    white-space: nowrap;
+    margin-bottom: 0; }
+
 .feedback-form {
   flex: 1;
   display: flex;
@@ -2283,99 +2407,4 @@ body.dark {
 .textarea-label-mandatory {
   color: #ff4a59;
   font-size: 1.5rem; }
-
-body {
-  --menu-background-color: var(--background-color-01);
-  --menu-item-color: var(--text-color-03);
-  --menu-item-background-color-on-hover: var(--background-color-04);
-  --menu-item-background-color-on-selected: var(--background-color-04);
-  --collapse-menu-background-color-on-hover: var(--background-color-04);
-  --selected-menu-item-background-color: #f5717314;
-  --menu-item-border-color-on-hover: #bbb; }
-
-body.dark {
-  --menu-background-color: var(--background-color-01);
-  --menu-item-color: var(--text-color-03);
-  --menu-item-background-color-on-hover: var(--background-color-04);
-  --menu-item-background-color-on-selected: var(--background-color-04);
-  --collapse-menu-background-color-on-hover: var(--background-color-04);
-  --selected-menu-item-background-color: #f5717314;
-  --menu-item-border-color-on-hover: #aaa; }
-
-body.hide-menu .tools-summary-menu-with-collapse-button-container {
-  width: 0; }
-
-.tools-summary-menu-with-collapse-button-container {
-  z-index: 2;
-  flex-shrink: 0;
-  width: var(--menu-width);
-  transition: width 0.25s ease-in;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--menu-background-color);
-  height: calc(100vh - var(--navbar-height));
-  position: -webkit-sticky;
-  position: sticky;
-  top: var(--navbar-height); }
-
-.tools-summary-menu-container {
-  padding: 1.5rem 0;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; }
-  .tools-summary-menu-container::-webkit-scrollbar {
-    background-color: var(--menu-background-color);
-    width: 1.4rem; }
-  .tools-summary-menu-container:hover {
-    overflow: auto;
-    overflow: overlay; }
-  .tools-summary-menu-container .tool-summary-menu-item-container {
-    border-radius: 0;
-    display: flex;
-    align-items: center;
-    padding: 0.7rem 1rem 0.7rem 1rem;
-    color: var(--menu-item-color);
-    transition: var(--transition);
-    flex-shrink: 0;
-    border: none;
-    border-left: 0.7rem solid transparent; }
-    .tools-summary-menu-container .tool-summary-menu-item-container.selected {
-      border-left-color: var(--secondary-color) !important;
-      background-color: var(--selected-menu-item-background-color); }
-      .tools-summary-menu-container .tool-summary-menu-item-container.selected .name,
-      .tools-summary-menu-container .tool-summary-menu-item-container.selected .iconify {
-        color: var(--secondary-color);
-        font-weight: 600; }
-    .tools-summary-menu-container .tool-summary-menu-item-container:hover {
-      text-decoration: none;
-      background-color: var(--menu-item-background-color-on-hover);
-      border-left-color: var(--menu-item-border-color-on-hover); }
-    .tools-summary-menu-container .tool-summary-menu-item-container .name {
-      font-size: 1.45rem;
-      font-weight: 400;
-      white-space: nowrap;
-      margin-left: 1.5rem; }
-    .tools-summary-menu-container .tool-summary-menu-item-container .iconify {
-      flex-shrink: 0;
-      font-size: 2.4rem; }
-
-.hide-menu-button {
-  cursor: pointer;
-  height: var(--footer-height);
-  display: flex;
-  align-items: center;
-  border-top: 2px solid var(--border-color);
-  overflow-x: hidden;
-  flex-shrink: 0; }
-  .hide-menu-button:hover {
-    background-color: var(--collapse-menu-background-color-on-hover); }
-  .hide-menu-button .iconify {
-    font-size: 2.3rem;
-    margin: 0 1.5rem;
-    flex-shrink: 0; }
-  .hide-menu-button p {
-    font-size: 1.45rem;
-    white-space: nowrap;
-    margin-bottom: 0; }
 
