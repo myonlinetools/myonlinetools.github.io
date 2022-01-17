@@ -1,5 +1,5 @@
 body {
-  --primary-color: #2478e6;
+  --primary-color: #e61972;
   --secondary-color: #f57173;
   --focus-color: #0060df;
   --focus-box-shadow-secondary: 0px 0px 3px 2px var(--secondary-color);
@@ -520,8 +520,8 @@ input {
     font-size: 2rem;
     margin-bottom: 1rem; }
 
-.gradient-font-awesome {
-  background-image: linear-gradient(to right, #f8c417, #e79e3f, #f14f95, #e61972);
+.gradient-font {
+  background-image: linear-gradient(to right, #f8c417, #e61972);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent; }
