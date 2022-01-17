@@ -520,6 +520,12 @@ input {
     font-size: 2rem;
     margin-bottom: 1rem; }
 
+.gradient-font-awesome {
+  background-image: linear-gradient(to right, #f8c417, #e79e3f, #f14f95, #e61972);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
 @font-face {
   font-family: 'Anonymous Pro';
   font-style: normal;
@@ -1867,17 +1873,17 @@ input {
     width: 3rem !important;
     height: 3rem !important; }
 
-.main-container {
-  padding-top: 0; }
+.tool-container {
+  position: relative; }
 
-h1 {
-  margin: 0 0 4rem; }
-
-.main-section {
-  padding: 7rem; }
-
-h2 {
-  margin: 4rem 0; }
+.coming-soon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: 200;
+  text-transform: uppercase; }
 
 .icon-button {
   cursor: pointer;
@@ -2182,7 +2188,7 @@ body.hide-menu .menu-with-collapse-button-container {
   border-radius: 0;
   display: flex;
   align-items: center;
-  padding: 0.7rem 1rem 0.7rem 1rem;
+  padding: 1rem;
   color: var(--menu-item-color);
   transition: var(--transition);
   flex-shrink: 0;
@@ -2204,9 +2210,9 @@ body.hide-menu .menu-with-collapse-button-container {
     font-weight: 400;
     white-space: nowrap;
     margin-left: 1.5rem; }
-  .menu-item-container .iconify {
+  .menu-item-container i {
     flex-shrink: 0;
-    font-size: 2.4rem; }
+    font-size: 2rem; }
 
 .menu-separator {
   margin: 2rem 2rem;
