@@ -154,7 +154,7 @@ body {
   --main-section-background-color: var(--background-color-01); }
 
 body.dark {
-  --primary-color: #2478e6;
+  --primary-color: #e61972;
   --secondary-color: #f57173;
   --focus-color: #0060df;
   --focus-box-shadow-secondary: 0px 0px 3px 2px var(--secondary-color);
@@ -475,15 +475,6 @@ li {
   font-size: 1.5rem;
   line-height: 1.7;
   color: var(--text-color-04); }
-
-button:hover {
-  cursor: pointer; }
-
-button,
-input {
-  font-family: var(--font-family);
-  color: var(--body-color);
-  background-color: transparent; }
 
 .clickable-element-background {
   position: fixed;
@@ -1873,6 +1864,68 @@ input {
     width: 3rem !important;
     height: 3rem !important; }
 
+textarea,
+button,
+input {
+  font-family: var(--font-family);
+  color: var(--body-color);
+  background-color: transparent; }
+
+label {
+  display: block;
+  font-size: 1.45rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--primary-color); }
+
+input,
+textarea {
+  display: block;
+  background-color: var(--background-color-03);
+  border: 2px solid transparent;
+  border-radius: 0.3rem;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+  transition-property: color, background-color;
+  resize: vertical;
+  font-family: var(--font-family); }
+  input:hover,
+  textarea:hover {
+    background-color: var(--background-color-04); }
+
+button,
+input[type='reset'],
+input[type='submit'] {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  border: 2px solid transparent;
+  border-radius: 0.3rem;
+  font-family: var(--font-family);
+  font-weight: 600;
+  transition: var(--transition);
+  transition-property: color, background-color; }
+  button.primary,
+  input[type='reset'].primary,
+  input[type='submit'].primary {
+    background-color: var(--primary-color);
+    color: var(--white-color); }
+    button.primary:hover,
+    input[type='reset'].primary:hover,
+    input[type='submit'].primary:hover {
+      opacity: 0.85; }
+  button.secondary,
+  input[type='reset'].secondary,
+  input[type='submit'].secondary {
+    background-color: var(--button-secondary-background-color);
+    color: var(--button-secondary-color); }
+    button.secondary:hover,
+    input[type='reset'].secondary:hover,
+    input[type='submit'].secondary:hover {
+      opacity: 0.85; }
+
 .tool-container {
   position: relative; }
 
@@ -1886,6 +1939,7 @@ input {
   text-transform: uppercase; }
 
 .icon-button {
+  all: initial;
   cursor: pointer;
   border: 2px solid transparent;
   border-radius: 0.3rem;
@@ -2013,7 +2067,7 @@ nav .left {
   nav .left span {
     font-size: 1.7rem;
     font-weight: bold;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
     color: var(--navbar-logo-text-color);
     transition: var(--transition);
     transition-property: color;
@@ -2079,7 +2133,7 @@ body.dark {
 .tools-search-input-container {
   background-color: var(--tools-search-input-container-background-color);
   border-radius: 0.4rem;
-  padding: 0.5rem 1.2rem 0.5rem 0.7rem;
+  padding: 0 1.2rem 0 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2095,6 +2149,7 @@ body.dark {
     margin-right: 0.7rem;
     font-size: 1.7rem; }
   .tools-search-input-container input {
+    background-color: transparent;
     border: none;
     outline: none;
     width: 30rem;
@@ -2195,7 +2250,7 @@ body.hide-menu .menu-with-collapse-button-container {
   border: none;
   border-left: 0.7rem solid transparent; }
   .menu-item-container.selected {
-    border-left-color: var(--secondary-color) !important;
+    border-left-color: var(--secondary-color);
     background-color: var(--selected-menu-item-background-color); }
     .menu-item-container.selected .name,
     .menu-item-container.selected .iconify {
