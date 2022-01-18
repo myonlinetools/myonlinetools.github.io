@@ -3,6 +3,7 @@ body {
   --secondary-color: #f57173;
   --focus-color: #0060df;
   --focus-color: #f57173;
+  --focus-color: #e61972;
   --focus-box-shadow-secondary: 0px 0px 3px 2px var(--secondary-color);
   --white-color: #fff;
   --black-color: #222;
@@ -159,6 +160,7 @@ body.dark {
   --secondary-color: #f57173;
   --focus-color: #0060df;
   --focus-color: #f57173;
+  --focus-color: #e61972;
   --focus-box-shadow-secondary: 0px 0px 3px 2px var(--secondary-color);
   --white-color: #fff;
   --black-color: #222;
