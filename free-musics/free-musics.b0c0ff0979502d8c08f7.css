@@ -450,11 +450,17 @@ p {
 
 h1 {
   font-size: 4rem;
-  font-weight: 400;
   margin-top: 2.8rem;
   margin-bottom: 2rem;
   position: relative;
-  color: var(--how-to-use-this-application-header-color); }
+  font-family: var(--font-family);
+  font-weight: bold;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, #f8c417, #e61972);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; }
 
 p {
   text-align: justify;

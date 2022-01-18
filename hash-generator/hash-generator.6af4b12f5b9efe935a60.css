@@ -450,11 +450,17 @@ p {
 
 h1 {
   font-size: 4rem;
-  font-weight: 400;
   margin-top: 2.8rem;
   margin-bottom: 2rem;
   position: relative;
-  color: var(--how-to-use-this-application-header-color); }
+  font-family: var(--font-family);
+  font-weight: bold;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, #f8c417, #e61972);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; }
 
 p {
   text-align: justify;
@@ -2293,48 +2299,4 @@ body.hide-menu .menu-with-collapse-button-container {
     font-size: 1.45rem;
     white-space: nowrap;
     margin-bottom: 0; }
-
-.qr-code-generator-tool {
-  display: flex; }
-  .qr-code-generator-tool img {
-    flex-shrink: 0;
-    flex-grow: 0;
-    margin-left: 1.5rem; }
-
-.tool-header-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1.5rem 0 3rem; }
-  .tool-header-container h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 1.2rem;
-    padding: 0 4rem; }
-    .tool-header-container h1::before, .tool-header-container h1::after {
-      display: none; }
-  .tool-header-container h2 {
-    font-size: 1.85rem;
-    font-weight: 400;
-    padding: 0 4rem; }
-
-.qr-code-generator-container {
-  display: flex; }
-
-.qr-code-image {
-  margin-left: 2rem;
-  flex-basis: 26rem;
-  flex-shrink: 0;
-  flex-grow: 0;
-  max-width: 26rem;
-  border: 1px solid var(--border-color);
-  border-radius: 0.3rem; }
-
-.qr-code-image {
-  flex-basis: 26rem;
-  max-width: 26rem;
-  border: 1px solid var(--border-color);
-  border-radius: 0.3rem; }
 
