@@ -2063,7 +2063,7 @@ nav .left {
     text-decoration: none;
     width: 100%; }
   nav .left img {
-    height: 2.5rem; }
+    height: 2rem; }
   nav .left span {
     font-size: 1.7rem;
     font-weight: bold;
@@ -2292,6 +2292,12 @@ body.hide-menu .menu-with-collapse-button-container {
     white-space: nowrap;
     margin-bottom: 0; }
 
+.qr-code-generator-tool {
+  display: flex; }
+  .qr-code-generator-tool img {
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-left: 1.5rem; }
 
 .tool-header-container {
   display: flex;
@@ -2313,4 +2319,21 @@ body.hide-menu .menu-with-collapse-button-container {
     font-weight: 400;
     padding: 0 4rem; }
 
+.qr-code-generator-container {
+  display: flex; }
+
+.qr-code-image {
+  margin-left: 2rem;
+  flex-basis: 26rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  max-width: 26rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.3rem; }
+
+.qr-code-image {
+  flex-basis: 26rem;
+  max-width: 26rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.3rem; }
 
