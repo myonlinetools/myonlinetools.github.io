@@ -2,6 +2,7 @@ body {
   --primary-color: #e61972;
   --secondary-color: #f57173;
   --focus-color: #0060df;
+  --focus-color: #f57173;
   --focus-box-shadow-secondary: 0px 0px 3px 2px var(--secondary-color);
   --white-color: #fff;
   --black-color: #222;
@@ -2050,10 +2051,10 @@ nav .left {
     nav .left .toggle-menu-icon .iconify {
       font-size: 3rem; }
   nav .left a {
+    height: 3.5rem;
     display: flex;
     align-items: center;
-    text-decoration: none;
-    width: 100%; }
+    text-decoration: none; }
   nav .left img {
     height: 2rem; }
   nav .left span {
