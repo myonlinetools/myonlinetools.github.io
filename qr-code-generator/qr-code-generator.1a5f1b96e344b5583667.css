@@ -2346,10 +2346,19 @@ body.hide-menu .menu-with-collapse-button-container {
     font-weight: 400;
     padding: 0 4rem; }
 
-
 .qr-code-image {
   flex-basis: 26rem;
   max-width: 26rem;
+  height: 26rem;
   border: 1px solid var(--border-color);
   border-radius: 0.3rem; }
+
+.qr-code-input-container {
+  flex: 1; }
+  .qr-code-input-container input,
+  .qr-code-input-container textarea {
+    margin-bottom: 1.5rem; }
+  .qr-code-input-container label {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem; }
 
