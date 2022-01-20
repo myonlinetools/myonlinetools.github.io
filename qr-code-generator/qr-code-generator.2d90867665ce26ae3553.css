@@ -2314,7 +2314,6 @@ body.hide-menu .menu-with-collapse-button-container {
   margin-bottom: 1.8rem; }
   .qr-code-generator-type button {
     cursor: pointer;
-    margin-right: 1.6rem;
     font-size: 1.6rem;
     font-weight: 600;
     font-family: var(--font-family);
