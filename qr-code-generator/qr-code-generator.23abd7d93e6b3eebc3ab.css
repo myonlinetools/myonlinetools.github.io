@@ -2412,6 +2412,7 @@ body.hide-menu .menu-with-collapse-button-container {
   font-size: 1.1rem;
   margin-bottom: 0.2rem; }
 
+.qr-code-telephone-input-container,
 .qr-code-text-input-container,
 .qr-code-url-input-container {
   height: 100%; }
