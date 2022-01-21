@@ -2415,5 +2415,8 @@ select {
     width: 100%;
     min-height: 25rem;
     background-color: var(--background-color-03);
-    border-radius: 0.3rem; }
+    border-radius: 0.3rem;
+    font-size: 1.5rem;
+    padding: 1.3rem;
+    font-family: var(--font-family); }
 
