@@ -2484,9 +2484,20 @@ select {
       border-right: 1px solid var(--border-color) !important; }
 
 .random-text-generator-output-container {
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  position: relative; }
   .random-text-generator-output-container label {
     font-size: 1.3rem; }
+  .random-text-generator-output-container:hover .icon-button {
+    opacity: 1; }
+  .random-text-generator-output-container .icon-button {
+    opacity: 0;
+    position: absolute;
+    top: 3.4rem;
+    right: 1rem;
+    background-color: var(--button-icon-background-color); }
+    .random-text-generator-output-container .icon-button:hover .iconify {
+      color: var(--primary-color); }
   .random-text-generator-output-container pre {
     width: 100%;
     min-height: 20rem;
