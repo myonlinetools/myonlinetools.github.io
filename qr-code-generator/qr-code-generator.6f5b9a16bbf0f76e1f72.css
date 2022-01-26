@@ -2318,7 +2318,8 @@ body.hide-menu .menu-with-collapse-button-container {
     font-family: var(--font-family);
     transition: var(--transition);
     transition-property: color;
-    padding: 0.5rem 2rem; }
+    padding: 0.5rem 2rem;
+    border-radius: 100rem; }
     .qr-code-generator-type button:hover {
       color: var(--primary-color); }
     .qr-code-generator-type button.active {
