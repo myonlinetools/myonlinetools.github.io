@@ -526,6 +526,20 @@ li {
           background-clip: text;
   -webkit-text-fill-color: transparent; }
 
+form input,
+form textarea,
+form select {
+  margin-bottom: 1.5rem;
+  background-color: var(--background-color-03); }
+  form input:hover,
+  form textarea:hover,
+  form select:hover {
+    background-color: var(--background-color-04); }
+
+form label {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem; }
+
 @font-face {
   font-family: 'Anonymous Pro';
   font-style: normal;
@@ -1935,6 +1949,25 @@ input[type='submit'] {
     input[type='submit'].secondary:hover {
       opacity: 0.85; }
 
+.main-container {
+  padding-top: 0; }
+
+h1 {
+  margin: 0 0 2rem; }
+
+.main-section {
+  padding: 7rem; }
+
+.contact-container .buttons-container {
+  display: flex;
+  justify-content: end; }
+  .contact-container .buttons-container input {
+    flex: 0;
+    margin-left: 1.5rem; }
+
+.contact-container input,
+.contact-container textarea {
+  margin-bottom: 2rem; }
 
 .icon-button {
   all: initial;
@@ -2290,23 +2323,26 @@ body.hide-menu .menu-with-collapse-button-container {
     white-space: nowrap;
     margin-bottom: 0; }
 
-
-.tool-header-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1.5rem 0 3rem; }
-  .tool-header-container h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 1.2rem;
-    padding: 0 4rem; }
-    .tool-header-container h1::before, .tool-header-container h1::after {
-      display: none; }
-  .tool-header-container h2 {
-    font-size: 1.85rem;
-    font-weight: 400;
-    padding: 0 4rem; }
+.toast-container {
+  z-index: var(--toast-z-index);
+  position: fixed;
+  top: calc(var(--navbar-height) + 1.5rem);
+  right: -30rem;
+  width: 30rem;
+  border-radius: 0.3rem;
+  transition: right 0.3s ease-in;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.5rem; }
+  .toast-container.info {
+    background-color: var(--toast-info-background-color);
+    color: var(--toast-info-color);
+    border: 1px solid var(--toast-info-border-color); }
+  .toast-container.warn {
+    background-color: var(--toast-warn-background-color);
+    color: var(--toast-warn-color);
+    border: 1px solid var(--toast-warn-border-color); }
+  .toast-container.error {
+    background-color: var(--toast-error-background-color);
+    color: var(--toast-error-color);
+    border: 1px solid var(--toast-error-border-color); }
 

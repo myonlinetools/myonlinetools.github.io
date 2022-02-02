@@ -526,6 +526,20 @@ li {
           background-clip: text;
   -webkit-text-fill-color: transparent; }
 
+form input,
+form textarea,
+form select {
+  margin-bottom: 1.5rem;
+  background-color: var(--background-color-03); }
+  form input:hover,
+  form textarea:hover,
+  form select:hover {
+    background-color: var(--background-color-04); }
+
+form label {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem; }
+
 @font-face {
   font-family: 'Anonymous Pro';
   font-style: normal;
