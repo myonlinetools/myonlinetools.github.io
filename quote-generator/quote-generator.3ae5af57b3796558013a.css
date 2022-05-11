@@ -2354,8 +2354,13 @@ body.hide-menu .menu-with-collapse-button-container {
   margin: 6rem auto;
   display: flex;
   justify-content: space-between;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem; }
+  -moz-column-gap: 2.8rem;
+       column-gap: 2.8rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   .quote-container .quote-icon {
     font-size: 10rem;
     flex-grow: 0;
@@ -2366,11 +2371,27 @@ body.hide-menu .menu-with-collapse-button-container {
   .quote-container .quote-right-icon {
     align-self: flex-end;
     margin-bottom: -3.1rem; }
+  .quote-container .quote-text-container {
+    display: flex;
+    flex-direction: column; }
+  .quote-container .quote-author {
+    margin-top: 2rem;
+    align-self: flex-end;
+    font-family: 'Bad Script';
+    font-weight: 400;
+    font-size: 2rem; }
+    .quote-container .quote-author .prefix {
+      display: inline-block; }
   .quote-container .quote-text {
     font-size: 4rem;
-    text-align: center;
     font-family: 'Bad Script';
     font-weight: 700; }
+
+.new-quote-button {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 100rem;
+  text-transform: uppercase; }
 
 .tool-header-container {
   display: flex;
