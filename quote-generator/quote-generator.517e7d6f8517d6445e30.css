@@ -2361,7 +2361,7 @@ body.hide-menu .menu-with-collapse-button-container {
 
 .quote-container {
   max-width: 80rem;
-  margin: 6rem auto;
+  margin: 6rem auto 2rem;
   display: flex;
   justify-content: space-between;
   -moz-column-gap: 2.8rem;
@@ -2382,8 +2382,10 @@ body.hide-menu .menu-with-collapse-button-container {
     align-self: flex-end;
     margin-bottom: -3.1rem; }
   .quote-container .quote-text-container {
+    width: 100%;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    text-align: center; }
   .quote-container .quote-author {
     margin-top: 2rem;
     align-self: flex-end;
